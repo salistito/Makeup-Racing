@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-export var SPEED = 10
+export var SPEED = 20
 
 func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("ui_right"):

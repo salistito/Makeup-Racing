@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://russian_car.gd" type="Script" id=1]
+[ext_resource path="res://capo.png" type="Texture" id=2]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 4.0
@@ -33,6 +34,9 @@ script = ExtResource( 1 )
 shape = SubResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.594591, 27.9464 )
+scale = Vector2( 3.32232, 3.40085 )
+texture = ExtResource( 2 )
 
 [node name="r_wheel" type="RigidBody2D" parent="."]
 position = Vector2( 101.111, 67.7438 )
