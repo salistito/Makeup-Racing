@@ -1,0 +1,70 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://russian_car.gd" type="Script" id=1]
+
+[sub_resource type="PhysicsMaterial" id=1]
+friction = 4.0
+rough = true
+absorbent = true
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 119.161, 48.2079 )
+
+[sub_resource type="PhysicsMaterial" id=3]
+rough = true
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 30.5304
+
+[sub_resource type="PhysicsMaterial" id=5]
+rough = true
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 26.817
+
+[node name="russian_car" type="RigidBody2D"]
+mass = 300.0
+physics_material_override = SubResource( 1 )
+gravity_scale = 5.0
+can_sleep = false
+script = ExtResource( 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="r_wheel" type="RigidBody2D" parent="."]
+position = Vector2( 101.111, 67.7438 )
+mass = 5.10204
+physics_material_override = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r_wheel"]
+shape = SubResource( 4 )
+
+[node name="Sprite" type="Sprite" parent="r_wheel"]
+
+[node name="PinJoint2D" type="PinJoint2D" parent="r_wheel"]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+softness = 0.03
+
+[node name="l_wheel" type="RigidBody2D" parent="."]
+position = Vector2( -99.7428, 69.3772 )
+mass = 5.10204
+physics_material_override = SubResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="l_wheel"]
+shape = SubResource( 6 )
+
+[node name="Sprite" type="Sprite" parent="l_wheel"]
+
+[node name="PinJoint2D" type="PinJoint2D" parent="l_wheel"]
+node_a = NodePath("../..")
+node_b = NodePath("..")
