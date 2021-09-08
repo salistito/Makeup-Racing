@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://russian_car.gd" type="Script" id=1]
 [ext_resource path="res://capo.png" type="Texture" id=2]
+[ext_resource path="res://icon.png" type="Texture" id=3]
 
 [sub_resource type="PhysicsMaterial" id=1]
 friction = 4.0
@@ -50,6 +51,7 @@ __meta__ = {
 shape = SubResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="r_wheel"]
+texture = ExtResource( 3 )
 
 [node name="PinJoint2D" type="PinJoint2D" parent="r_wheel"]
 node_a = NodePath("../..")
@@ -68,6 +70,7 @@ __meta__ = {
 shape = SubResource( 6 )
 
 [node name="Sprite" type="Sprite" parent="l_wheel"]
+texture = ExtResource( 2 )
 
 [node name="PinJoint2D" type="PinJoint2D" parent="l_wheel"]
 node_a = NodePath("../..")

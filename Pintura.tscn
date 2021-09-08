@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Pintura.gd" type="Script" id=1]
+
+[node name="Pintura" type="StaticBody2D"]
+position = Vector2( 0.846863, -0.355621 )
+input_pickable = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+pintura = Color( 0.603922, 0.2, 0.2, 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 2.97302, 8.91905 )
+polygon = PoolVector2Array( -65.5699, -83.8098, 64.1063, -82.1425, 62.11, -6.71518, 63.2654, 57.4463, -66.1312, 58.1816 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+polygon = PoolVector2Array( 73.2712, 73.3743, 74.4604, -80.0334, -71.2175, -80.628, -73.0013, 73.9689 )
