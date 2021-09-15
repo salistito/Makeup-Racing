@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://prueba choque boton pablo.gd" type="Script" id=1]
+
+[node name="prueba_choque_boton_pablo" type="StaticBody2D"]
+position = Vector2( 0.235977, 0 )
+input_pickable = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -0.679871, -33.8538, -20.8964, -24.3401, -26.8424, 26.2012, 10.6176, 24.4174, 29.0503, -19.5833 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color( 0.0588235, 0.0392157, 0.388235, 1 )
+polygon = PoolVector2Array( -5.3053, -35.8479, -30.5037, -25.1385, -32.0786, 28.0931, 12.3336, 32.5029, 32.1774, 2.26475, 33.1223, -21.6738, 18.0032, -36.4778, -4.06492, -36.0623 )

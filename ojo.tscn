@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Ojo.gd" type="Script" id=1]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 73.4895
+
+[node name="Ojo" type="StaticBody2D"]
+input_pickable = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.345352, -0.0302124 )
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+position = Vector2( 0.0215759, -0.368942 )
+polygon = PoolVector2Array( -40.122, -74.9661, 42.026, -76.5535, 78.4421, -32.5569, 78.0216, 39.3397, 41.4426, 75.0778, -40.1243, 74.6573, -77.1238, 33.8739, -76.7033, -30.4547 )

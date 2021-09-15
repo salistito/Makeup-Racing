@@ -1,8 +1,8 @@
-extends RigidBody2D
+extends StaticBody2D
+
 
 export(Color) var pintura
-
-signal color_selected
+signal tool_selected
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,7 +13,7 @@ func _ready():
 
 func on_input_event(viewport, event: InputEvent, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == BUTTON_LEFT:
-		emit_signal("color_selected", pintura)
+		emit_signal("tool_selected", pintura)
 #		get_parent().selected_color = pintura
 #		#$cuerpo.color = Color(get_parent().color)
 #		print("aaaa")

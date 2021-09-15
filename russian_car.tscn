@@ -1,77 +1,91 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://russian_car.gd" type="Script" id=1]
 [ext_resource path="res://capo.png" type="Texture" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://rueda.png" type="Texture" id=4]
 
-[sub_resource type="PhysicsMaterial" id=1]
-friction = 4.0
-rough = true
-absorbent = true
-
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 119.161, 48.2079 )
 
-[sub_resource type="PhysicsMaterial" id=3]
+[sub_resource type="PhysicsMaterial" id=2]
 rough = true
 
-[sub_resource type="CircleShape2D" id=4]
-radius = 30.5304
-
-[sub_resource type="PhysicsMaterial" id=5]
-rough = true
-
-[sub_resource type="CircleShape2D" id=6]
+[sub_resource type="CircleShape2D" id=3]
 radius = 26.817
 
+[sub_resource type="PhysicsMaterial" id=4]
+rough = true
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 30.5304
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 103.687, 6.77525 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 104.663, 4.79554 )
+
 [node name="russian_car" type="RigidBody2D"]
-mass = 300.0
-physics_material_override = SubResource( 1 )
-gravity_scale = 5.0
-can_sleep = false
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 0.594591, 27.9464 )
 scale = Vector2( 3.32232, 3.40085 )
 texture = ExtResource( 2 )
 
-[node name="r_wheel" type="RigidBody2D" parent="."]
-position = Vector2( 101.111, 67.7438 )
+[node name="l_wheel" type="RigidBody2D" parent="."]
+position = Vector2( -99.7428, 69.3772 )
 mass = 5.10204
-physics_material_override = SubResource( 3 )
+physics_material_override = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="l_wheel"]
+shape = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="l_wheel"]
+position = Vector2( 93.7344, -39.995 )
+scale = Vector2( 3.63351, 4.29571 )
+texture = ExtResource( 4 )
+
+[node name="PinJoint2D" type="PinJoint2D" parent="l_wheel"]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="r_wheel" type="RigidBody2D" parent="."]
+position = Vector2( 101.361, 67.4938 )
+mass = 5.10204
+physics_material_override = SubResource( 4 )
 __meta__ = {
 "_edit_group_": true
 }
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="r_wheel"]
-shape = SubResource( 4 )
-
-[node name="Sprite" type="Sprite" parent="r_wheel"]
-texture = ExtResource( 3 )
+shape = SubResource( 5 )
 
 [node name="PinJoint2D" type="PinJoint2D" parent="r_wheel"]
 node_a = NodePath("../..")
 node_b = NodePath("..")
 softness = 0.03
 
-[node name="l_wheel" type="RigidBody2D" parent="."]
-position = Vector2( -99.7428, 69.3772 )
-mass = 5.10204
-physics_material_override = SubResource( 5 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Sprite" type="Sprite" parent="r_wheel"]
+position = Vector2( 101.714, -39.4265 )
+scale = Vector2( 3.97422, 4.47104 )
+texture = ExtResource( 4 )
+normal_map = ExtResource( 4 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="l_wheel"]
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -0.664398, -57.9957 )
 shape = SubResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="l_wheel"]
-texture = ExtResource( 2 )
+[node name="tocar_suelo" type="Area2D" parent="."]
 
-[node name="PinJoint2D" type="PinJoint2D" parent="l_wheel"]
-node_a = NodePath("../..")
-node_b = NodePath("..")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tocar_suelo"]
+position = Vector2( -1.41324, 105.296 )
+shape = SubResource( 7 )

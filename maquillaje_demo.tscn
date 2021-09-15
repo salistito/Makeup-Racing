@@ -1,13 +1,30 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Pintura.tscn" type="PackedScene" id=1]
 [ext_resource path="res://maquillaje_demo.gd" type="Script" id=2]
 [ext_resource path="res://ceja.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ojo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://labio_superior.tscn" type="PackedScene" id=5]
+[ext_resource path="res://herramienta.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Boton.gd" type="Script" id=7]
+[ext_resource path="res://foto.gd" type="Script" id=8]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
 [node name="maquillaje" type="Node2D"]
 script = ExtResource( 2 )
+
+[node name="Detalles cara" type="Node2D" parent="."]
+
+[node name="Polygon2D2" type="Polygon2D" parent="Detalles cara"]
+position = Vector2( -44.6192, 2.99664 )
+color = Color( 1, 0.823529, 0.823529, 1 )
+polygon = PoolVector2Array( 687.264, 241.135, 567.055, 242.549, 487.859, 251.034, 383.208, 324.573, 357.752, 474.48, 360.58, 556.504, 301.183, 546.605, 289.87, 631.458, 287.041, 707.825, 359.166, 738.938, 391.693, 781.364, 415.735, 915.714, 558.57, 989.254, 702.82, 1000.57, 814.543, 1001.98, 1005.46, 876.117, 1011.12, 761.565, 1052.58, 755.457, 1063.91, 575.177, 1047.86, 538.366, 992.734, 559.333, 999.805, 376.899, 975.763, 297.703, 933.337, 253.863, 783.43, 229.821 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Detalles cara"]
+position = Vector2( -33.2271, -9.86719 )
+color = Color( 0.952941, 0.65098, 0.65098, 1 )
+polygon = PoolVector2Array( 670.425, 564.874, 620.029, 746.302, 738.461, 742.522, 693.104, 558.574 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -42,26 +59,181 @@ __meta__ = {
 [node name="pinturas" type="Node2D" parent="."]
 
 [node name="Pintura" parent="pinturas" instance=ExtResource( 1 )]
-position = Vector2( 580.868, 121.205 )
-pintura = Color( 0.14902, 0.266667, 0.898039, 1 )
+position = Vector2( 285.09, 92.6962 )
+pintura = Color( 0.368627, 0.254902, 0.0705882, 1 )
 
 [node name="Pintura2" parent="pinturas" instance=ExtResource( 1 )]
-position = Vector2( 748.787, 119.245 )
-pintura = Color( 0.815686, 0.0941176, 0.0941176, 1 )
+position = Vector2( 381.307, 89.1326 )
+pintura = Color( 0.0705882, 0.0941176, 0.215686, 1 )
 
 [node name="Pintura3" parent="pinturas" instance=ExtResource( 1 )]
-position = Vector2( 919.852, 123.745 )
-pintura = Color( 0.0627451, 0.509804, 0.0784314, 1 )
+position = Vector2( 470.396, 85.5691 )
+pintura = Color( 0.12549, 0.396078, 0.0627451, 1 )
+
+[node name="Pintura4" parent="pinturas" instance=ExtResource( 1 )]
+position = Vector2( 566.614, 90.9144 )
+pintura = Color( 0.796078, 0.815686, 0.141176, 1 )
+
+[node name="Pintura5" parent="pinturas" instance=ExtResource( 1 )]
+position = Vector2( 662.831, 94.4781 )
+pintura = Color( 0.937255, 0.345098, 0.345098, 1 )
+
+[node name="Pintura6" parent="pinturas" instance=ExtResource( 1 )]
+position = Vector2( 760.829, 94.4781 )
+pintura = Color( 0.960784, 0.360784, 0.937255, 1 )
+
+[node name="Pintura7" parent="pinturas" instance=ExtResource( 1 )]
+position = Vector2( 864.174, 96.2598 )
+pintura = Color( 0.101961, 0.972549, 0.768627, 1 )
+
+[node name="Pintura8" parent="pinturas" instance=ExtResource( 1 )]
+position = Vector2( 963.954, 98.0417 )
+pintura = Color( 0.658824, 0.701961, 0.937255, 1 )
 
 [node name="pintables" type="Node2D" parent="."]
 
 [node name="ceja" parent="pintables" instance=ExtResource( 3 )]
-position = Vector2( 828.274, 364.575 )
+position = Vector2( 787.687, 369.294 )
 scale = Vector2( 0.5, 0.5 )
 pintura = Color( 0.378906, 0.29594, 0.0754852, 1 )
+herramienta_seleccionada = "lapiz de cejas"
 
 [node name="ceja2" parent="pintables" instance=ExtResource( 3 )]
-position = Vector2( 566.725, 364.992 )
+position = Vector2( 532.745, 375.375 )
 rotation = 3.14159
 scale = Vector2( 0.5, -0.5 )
 pintura = Color( 0.378906, 0.29594, 0.0754852, 1 )
+herramienta_seleccionada = "lapiz de cejas"
+
+[node name="Ojo" parent="pintables" instance=ExtResource( 4 )]
+position = Vector2( 810.511, 500.202 )
+pintura = Color( 0.0941176, 0.788235, 0.972549, 1 )
+herramienta_seleccionada = "lentes de contacto"
+
+[node name="Ojo2" parent="pintables" instance=ExtResource( 4 )]
+position = Vector2( 502.893, 512.041 )
+pintura = Color( 0.0588235, 0.929412, 0.94902, 1 )
+herramienta_seleccionada = "lentes de contacto"
+
+[node name="labio_superior" parent="pintables" instance=ExtResource( 5 )]
+position = Vector2( 640.641, 856.078 )
+pintura = Color( 0.996078, 0.686275, 0.686275, 1 )
+herramienta_seleccionada = "pinta labios"
+
+[node name="labio_superior2" parent="pintables" instance=ExtResource( 5 )]
+position = Vector2( 634.204, 869.882 )
+scale = Vector2( 0.7, -0.7 )
+pintura = Color( 0.968627, 0.615686, 0.615686, 1 )
+herramienta_seleccionada = "pinta labios"
+
+[node name="aro" parent="pintables" instance=ExtResource( 4 )]
+position = Vector2( 302.86, 735.242 )
+scale = Vector2( 0.4, 0.8 )
+pintura = Color( 0.0941176, 0.788235, 0.972549, 1 )
+herramienta_seleccionada = "aros"
+
+[node name="aro2" parent="pintables" instance=ExtResource( 4 )]
+position = Vector2( 986.874, 733.99 )
+scale = Vector2( 0.4, 0.8 )
+pintura = Color( 0.0941176, 0.788235, 0.972549, 1 )
+herramienta_seleccionada = "aros"
+
+[node name="herramientas" type="Node2D" parent="."]
+
+[node name="herramienta" parent="herramientas" instance=ExtResource( 6 )]
+position = Vector2( 129.43, 500.109 )
+scale = Vector2( 0.5, 0.5 )
+herramienta = "lapiz de cejas"
+
+[node name="herramienta2" parent="herramientas" instance=ExtResource( 6 )]
+position = Vector2( 124.225, 663.15 )
+scale = Vector2( 0.5, 0.5 )
+herramienta = "lentes de contacto"
+
+[node name="herramienta3" parent="herramientas" instance=ExtResource( 6 )]
+position = Vector2( 121.964, 820.107 )
+scale = Vector2( 0.5, 0.5 )
+herramienta = "aros"
+
+[node name="herramienta4" parent="herramientas" instance=ExtResource( 6 )]
+position = Vector2( 108.955, 967.965 )
+scale = Vector2( 0.5, 0.5 )
+herramienta = "pinta labios"
+
+[node name="foto" type="Node2D" parent="."]
+
+[node name="Fondo" type="Node2D" parent="foto"]
+
+[node name="Polygon2D2" type="Polygon2D" parent="foto/Fondo"]
+position = Vector2( -84.0175, -64.5088 )
+scale = Vector2( 0.307091, 0.350583 )
+color = Color( 1, 0.823529, 0.823529, 1 )
+polygon = PoolVector2Array( 687.264, 241.135, 567.055, 242.549, 487.859, 251.034, 383.208, 324.573, 357.752, 474.48, 360.58, 556.504, 301.183, 546.605, 289.87, 631.458, 287.041, 707.825, 359.166, 738.938, 391.693, 781.364, 415.735, 915.714, 558.57, 989.254, 702.82, 1000.57, 814.543, 1001.98, 1005.46, 876.117, 1011.12, 761.565, 1052.58, 755.457, 1063.91, 575.177, 1047.86, 538.366, 992.734, 559.333, 999.805, 376.899, 975.763, 297.703, 933.337, 253.863, 783.43, 229.821 )
+
+[node name="Polygon2D" type="Polygon2D" parent="foto/Fondo"]
+position = Vector2( -95.134, -112.456 )
+scale = Vector2( 0.324465, 0.40604 )
+color = Color( 0.952941, 0.65098, 0.65098, 1 )
+polygon = PoolVector2Array( 670.425, 564.874, 620.029, 746.302, 738.461, 742.522, 693.104, 558.574 )
+
+[node name="partes_cara" type="Node2D" parent="foto"]
+
+[node name="aro2" parent="foto/partes_cara" instance=ExtResource( 4 )]
+position = Vector2( 224.296, 187.198 )
+scale = Vector2( 0.2, 0.3 )
+script = ExtResource( 8 )
+
+[node name="Ojo2" parent="foto/partes_cara" instance=ExtResource( 4 )]
+position = Vector2( 182.236, 111.914 )
+scale = Vector2( 0.2, 0.2 )
+script = ExtResource( 8 )
+
+[node name="ceja_foto" parent="foto/partes_cara" instance=ExtResource( 3 )]
+position = Vector2( 174.398, 73.2139 )
+scale = Vector2( 0.2, 0.2 )
+script = ExtResource( 8 )
+
+[node name="ceja_foto2" parent="foto/partes_cara" instance=ExtResource( 3 )]
+position = Vector2( 81.3822, 73.8553 )
+rotation = 3.14159
+scale = Vector2( 0.2, -0.2 )
+script = ExtResource( 8 )
+
+[node name="Ojo" parent="foto/partes_cara" instance=ExtResource( 4 )]
+position = Vector2( 76.8451, 113.752 )
+scale = Vector2( 0.2, 0.2 )
+script = ExtResource( 8 )
+
+[node name="labio_superior2" parent="foto/partes_cara" instance=ExtResource( 5 )]
+position = Vector2( 132.8, 230.048 )
+scale = Vector2( 0.2, -0.2 )
+script = ExtResource( 8 )
+
+[node name="labio_superior" parent="foto/partes_cara" instance=ExtResource( 5 )]
+position = Vector2( 131.393, 222.181 )
+scale = Vector2( 0.2, 0.2 )
+script = ExtResource( 8 )
+
+[node name="aro3" parent="foto/partes_cara" instance=ExtResource( 4 )]
+position = Vector2( 27.7918, 180.986 )
+scale = Vector2( 0.2, 0.3 )
+script = ExtResource( 8 )
+
+[node name="Extras" type="Node2D" parent="."]
+
+[node name="distractores" type="Node2D" parent="."]
+
+[node name="Boton" type="RigidBody2D" parent="distractores"]
+position = Vector2( 137.907, 347.29 )
+input_pickable = true
+mode = 1
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="distractores/Boton"]
+polygon = PoolVector2Array( -98.7142, -31.7548, -102.282, 26.5164, 91.5589, 25.9218, 89.7751, -35.917 )
+
+[node name="Polygon2D" type="Polygon2D" parent="distractores/Boton"]
+polygon = PoolVector2Array( -99.3088, -31.1602, -102.876, 26.5164, 91.5589, 25.3272, 90.3697, -36.5116 )
