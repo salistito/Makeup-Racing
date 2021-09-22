@@ -171,12 +171,12 @@ _global_script_class_icons={
 [application]
 
 config/name="Makeup Racing"
-run/main_scene="res://main.tscn"
+run/main_scene="res://scenes/main.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
-Manager="*res://manager.gd"
+Manager="*res://marcianeke_scripts/manager.gd"
 
 [display]
 
@@ -189,7 +189,7 @@ window/stretch/aspect="keep"
 
 [editor_plugins]
 
-enabled=PoolStringArray( "res://addons/rmsmartshape/plugin.cfg" )
+enabled=PoolStringArray(  )
 
 [importer_defaults]
 
