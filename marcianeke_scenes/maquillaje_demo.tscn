@@ -1,13 +1,14 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Pintura.tscn" type="PackedScene" id=1]
-[ext_resource path="res://maquillaje_demo.gd" type="Script" id=2]
-[ext_resource path="res://ceja.tscn" type="PackedScene" id=3]
-[ext_resource path="res://ojo.tscn" type="PackedScene" id=4]
-[ext_resource path="res://labio_superior.tscn" type="PackedScene" id=5]
-[ext_resource path="res://herramienta.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Boton.gd" type="Script" id=7]
-[ext_resource path="res://foto.gd" type="Script" id=8]
+[ext_resource path="res://marcianeke_scenes/Pintura.tscn" type="PackedScene" id=1]
+[ext_resource path="res://marcianeke_scripts/maquillaje_demo.gd" type="Script" id=2]
+[ext_resource path="res://marcianeke_scenes/ceja.tscn" type="PackedScene" id=3]
+[ext_resource path="res://marcianeke_scenes/ojo.tscn" type="PackedScene" id=4]
+[ext_resource path="res://marcianeke_scenes/labio_superior.tscn" type="PackedScene" id=5]
+[ext_resource path="res://marcianeke_scenes/herramienta.tscn" type="PackedScene" id=6]
+[ext_resource path="res://marcianeke_scripts/Boton.gd" type="Script" id=7]
+[ext_resource path="res://marcianeke_scripts/foto.gd" type="Script" id=8]
+
 
 [sub_resource type="StyleBoxEmpty" id=1]
 

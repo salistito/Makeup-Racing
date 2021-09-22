@@ -1,0 +1,109 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://marcianeke_scripts/russian_car.gd" type="Script" id=1]
+[ext_resource path="res://marcianeke_sprites/capo.png" type="Texture" id=2]
+[ext_resource path="res://marcianeke_sprites/rueda.png" type="Texture" id=3]
+
+[sub_resource type="PhysicsMaterial" id=2]
+rough = true
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 30.51
+
+[sub_resource type="PhysicsMaterial" id=4]
+rough = true
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 30.5304
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 103.687, 6.77525 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 104.663, 4.79554 )
+
+[node name="russian_car" type="RigidBody2D"]
+contacts_reported = 1
+contact_monitor = true
+script = ExtResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 0.594591, 27.9464 )
+scale = Vector2( 3.32232, 3.40085 )
+polygon = PoolVector2Array( 15.5621, -15.4377, 22.3631, -9.49319, 30.2379, -9.14351, 40.7972, -7.04543, 45.0926, -0.926045, 45.0926, 6.59206, 41.6921, 10.4385, 35.786, 1.52171, 24.8687, 1.69655, 19.4995, 11.3127, 6.61351, 11.8372, -8.95709, 12.7114, -18.6216, 12.5366, -21.6641, 6.06754, -25.6015, 0.822354, -34.0132, 1.17203, -36.5188, 3.79463, -39.5614, 9.03982, -41.709, 7.46626, -40.8142, -8.61899, -27.5702, -20.8578, -17.1898, -21.2074, -6.09354, -21.3823, 7.15041, -21.5571 )
+
+[node name="car_Area2D" type="Area2D" parent="."]
+position = Vector2( 0.594591, 27.9464 )
+scale = Vector2( 3.32232, 3.40085 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="car_Area2D"]
+position = Vector2( -0.162264, 0.0671605 )
+scale = Vector2( 0.961186, 0.868207 )
+polygon = PoolVector2Array( 16.4131, -17.1394, 21.9488, -11.3918, 29.256, -10.9128, 42.5418, -7.56006, 46.749, -2.29144, 47.4132, 7.52736, 39.2203, -5.88368, -34.5158, -9.23644, -42.7087, 7.76684, -42.2659, -10.1944, -28.5372, -24.5633, -19.0157, -24.8028, -7.27995, -24.8028, 8.22015, -24.3239 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0.594591, 27.9464 )
+scale = Vector2( 3.32232, 3.40085 )
+texture = ExtResource( 2 )
+
+[node name="l_wheel" type="RigidBody2D" parent="."]
+position = Vector2( -92.5995, 65.0118 )
+mass = 5.10204
+physics_material_override = SubResource( 2 )
+contacts_reported = 1
+contact_monitor = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="l_wheel"]
+position = Vector2( 91.5513, -37.4417 )
+scale = Vector2( 3.67469, 4.37059 )
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="l_wheel"]
+shape = SubResource( 3 )
+
+[node name="PinJoint2D" type="PinJoint2D" parent="l_wheel"]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+
+[node name="r_wheel" type="RigidBody2D" parent="."]
+position = Vector2( 101.361, 67.4938 )
+mass = 5.10204
+physics_material_override = SubResource( 4 )
+contacts_reported = 1
+contact_monitor = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="r_wheel"]
+position = Vector2( 101.714, -39.4265 )
+scale = Vector2( 3.97422, 4.47104 )
+texture = ExtResource( 3 )
+normal_map = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r_wheel"]
+shape = SubResource( 5 )
+
+[node name="PinJoint2D" type="PinJoint2D" parent="r_wheel"]
+node_a = NodePath("../..")
+node_b = NodePath("..")
+softness = 0.03
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( -0.664398, -57.9957 )
+shape = SubResource( 6 )
+
+[node name="tocar_suelo" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tocar_suelo"]
+position = Vector2( -1.41324, 105.296 )
+shape = SubResource( 7 )
+
+[node name="onAirTimer" type="Timer" parent="."]
+wait_time = 0.15
+one_shot = true
