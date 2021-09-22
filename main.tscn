@@ -52,6 +52,7 @@ physics_object_picking = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ProgressBar" type="ProgressBar" parent="CanvasLayer"]
+visible = false
 margin_left = 222.912
 margin_top = 899.711
 margin_right = 976.912
@@ -61,6 +62,7 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="CanvasLayer/ProgressBar"]
+visible = false
 margin_left = 327.009
 margin_top = -22.9864
 margin_right = 415.009
