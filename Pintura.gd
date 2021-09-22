@@ -7,7 +7,7 @@ signal color_selected
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	connect("input_event", self, "on_input_event")
-	$Polygon2D.color = pintura
+	$botella_liquido.modulate = pintura
 
 
 

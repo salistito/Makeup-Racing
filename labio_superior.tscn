@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://labio_superior.gd" type="Script" id=1]
+[ext_resource path="res://scripts/pintable.gd" type="Script" id=1]
 
 [node name="labio_superior" type="StaticBody2D"]
 input_pickable = true

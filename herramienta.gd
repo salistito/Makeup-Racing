@@ -3,11 +3,15 @@ extends StaticBody2D
 
 export(String) var herramienta
 
+export(Texture) var imagen
+
 signal tool_selected
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	connect("input_event", self, "on_input_event")
+	$Sprite.texture = imagen
+	
 
 
 
