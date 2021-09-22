@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://labio_inf_def.gd" type="Script" id=1]
+[ext_resource path="res://marcianeke_scripts/labio_inf_def.gd" type="Script" id=1]
 [ext_resource path="res://sprites/labio_inferior.png" type="Texture" id=2]
 
 [node name="labio_inf_def" type="StaticBody2D"]

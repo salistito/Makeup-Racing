@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/capo.png-f45af3b8d65b1954e7b74d1ef5a0aa0a.stex"
+path="res://.import/rueda.png-7407eabc1bf381fd5a4866cd1f29b1d9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://capo.png"
-dest_files=[ "res://.import/capo.png-f45af3b8d65b1954e7b74d1ef5a0aa0a.stex" ]
+source_file="res://sprites/rueda.png"
+dest_files=[ "res://.import/rueda.png-7407eabc1bf381fd5a4866cd1f29b1d9.stex" ]
 
 [params]
 
