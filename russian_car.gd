@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-export var SPEED = 60
+export var SPEED = 30
 
 var air_time = 12331230
 var block = 0
