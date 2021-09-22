@@ -1,22 +1,24 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Pintura.gd" type="Script" id=1]
+[ext_resource path="res://sprites/botella.png" type="Texture" id=2]
+[ext_resource path="res://sprites/botella_liquido.png" type="Texture" id=3]
 
 [node name="Pintura" type="RigidBody2D"]
-position = Vector2( 0.846863, -0.355621 )
 input_pickable = true
 mode = 1
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-pintura = Color( 0.603922, 0.2, 0.2, 1 )
+pintura = Color( 0.611765, 0.176471, 0.176471, 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( 2.97302, 8.91905 )
+position = Vector2( 3.17145, 8.91905 )
 scale = Vector2( 0.5, 0.7 )
-polygon = PoolVector2Array( -65.5699, -83.8098, 64.1063, -82.1425, 62.11, -6.71518, 63.2654, 57.4463, -66.1312, 58.1816 )
+polygon = PoolVector2Array( -102.323, -92.5591, 90.2269, -93.2333, 68.9898, -31.5443, 106.513, 4.94823, 109.174, 65.4348, -113.855, 66.8521, -110.859, 6.75015, -74.7002, -29.2883 )
 
-[node name="Polygon2D" type="Polygon2D" parent="."]
-scale = Vector2( 0.5, 0.7 )
-polygon = PoolVector2Array( 73.2712, 73.3743, 74.4604, -80.0334, -71.2175, -80.628, -73.0013, 73.9689 )
+[node name="botella_liquido" type="Sprite" parent="."]
+scale = Vector2( 7, 7 )
+texture = ExtResource( 3 )
+
+[node name="botella" type="Sprite" parent="."]
+scale = Vector2( 7, 7 )
+texture = ExtResource( 2 )

@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Pintura.tscn" type="PackedScene" id=1]
 [ext_resource path="res://maquillaje_demo.gd" type="Script" id=2]
@@ -8,6 +8,15 @@
 [ext_resource path="res://herramienta.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Boton.gd" type="Script" id=7]
 [ext_resource path="res://foto.gd" type="Script" id=8]
+[ext_resource path="res://sprites/cejas.png" type="Texture" id=9]
+[ext_resource path="res://sprites/ojos.png" type="Texture" id=10]
+[ext_resource path="res://sprites/pinta_labios.png" type="Texture" id=11]
+[ext_resource path="res://sprites/fondo_maquillaje.png" type="Texture" id=12]
+[ext_resource path="res://ojo_def.tscn" type="PackedScene" id=13]
+[ext_resource path="res://aros_def.tscn" type="PackedScene" id=14]
+[ext_resource path="res://ceja_def.tscn" type="PackedScene" id=15]
+[ext_resource path="res://labio_inf_def.tscn" type="PackedScene" id=16]
+[ext_resource path="res://labio_sup_def.tscn" type="PackedScene" id=17]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -56,49 +65,56 @@ __meta__ = {
 "_edit_lock_": true
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 514, 514 )
+scale = Vector2( 8, 8 )
+texture = ExtResource( 12 )
+
 [node name="pinturas" type="Node2D" parent="."]
 
 [node name="Pintura" parent="pinturas" instance=ExtResource( 1 )]
-position = Vector2( 285.09, 92.6962 )
+position = Vector2( 433.422, 63.4792 )
 pintura = Color( 0.368627, 0.254902, 0.0705882, 1 )
 
 [node name="Pintura2" parent="pinturas" instance=ExtResource( 1 )]
-position = Vector2( 381.307, 89.1326 )
+position = Vector2( 560.355, 64.4106 )
 pintura = Color( 0.0705882, 0.0941176, 0.215686, 1 )
 
 [node name="Pintura3" parent="pinturas" instance=ExtResource( 1 )]
-position = Vector2( 470.396, 85.5691 )
+position = Vector2( 686.152, 62.3453 )
 pintura = Color( 0.12549, 0.396078, 0.0627451, 1 )
 
 [node name="Pintura4" parent="pinturas" instance=ExtResource( 1 )]
-position = Vector2( 566.614, 90.9144 )
+position = Vector2( 812.336, 62.4466 )
 pintura = Color( 0.796078, 0.815686, 0.141176, 1 )
 
 [node name="Pintura5" parent="pinturas" instance=ExtResource( 1 )]
-position = Vector2( 662.831, 94.4781 )
+position = Vector2( 436.587, 188.871 )
 pintura = Color( 0.937255, 0.345098, 0.345098, 1 )
 
 [node name="Pintura6" parent="pinturas" instance=ExtResource( 1 )]
-position = Vector2( 760.829, 94.4781 )
+position = Vector2( 562.303, 187.373 )
 pintura = Color( 0.960784, 0.360784, 0.937255, 1 )
 
 [node name="Pintura7" parent="pinturas" instance=ExtResource( 1 )]
-position = Vector2( 864.174, 96.2598 )
+position = Vector2( 688.872, 186.158 )
 pintura = Color( 0.101961, 0.972549, 0.768627, 1 )
 
 [node name="Pintura8" parent="pinturas" instance=ExtResource( 1 )]
-position = Vector2( 963.954, 98.0417 )
+position = Vector2( 816.371, 182.696 )
 pintura = Color( 0.658824, 0.701961, 0.937255, 1 )
 
 [node name="pintables" type="Node2D" parent="."]
 
 [node name="ceja" parent="pintables" instance=ExtResource( 3 )]
+visible = false
 position = Vector2( 787.687, 369.294 )
 scale = Vector2( 0.5, 0.5 )
 pintura = Color( 0.378906, 0.29594, 0.0754852, 1 )
 herramienta_seleccionada = "lapiz de cejas"
 
 [node name="ceja2" parent="pintables" instance=ExtResource( 3 )]
+visible = false
 position = Vector2( 532.745, 375.375 )
 rotation = 3.14159
 scale = Vector2( 0.5, -0.5 )
@@ -106,59 +122,108 @@ pintura = Color( 0.378906, 0.29594, 0.0754852, 1 )
 herramienta_seleccionada = "lapiz de cejas"
 
 [node name="Ojo" parent="pintables" instance=ExtResource( 4 )]
+visible = false
 position = Vector2( 810.511, 500.202 )
 pintura = Color( 0.0941176, 0.788235, 0.972549, 1 )
 herramienta_seleccionada = "lentes de contacto"
 
 [node name="Ojo2" parent="pintables" instance=ExtResource( 4 )]
+visible = false
 position = Vector2( 502.893, 512.041 )
 pintura = Color( 0.0588235, 0.929412, 0.94902, 1 )
 herramienta_seleccionada = "lentes de contacto"
 
 [node name="labio_superior" parent="pintables" instance=ExtResource( 5 )]
+visible = false
 position = Vector2( 640.641, 856.078 )
 pintura = Color( 0.996078, 0.686275, 0.686275, 1 )
 herramienta_seleccionada = "pinta labios"
 
 [node name="labio_superior2" parent="pintables" instance=ExtResource( 5 )]
+visible = false
 position = Vector2( 634.204, 869.882 )
 scale = Vector2( 0.7, -0.7 )
 pintura = Color( 0.968627, 0.615686, 0.615686, 1 )
 herramienta_seleccionada = "pinta labios"
 
 [node name="aro" parent="pintables" instance=ExtResource( 4 )]
+visible = false
 position = Vector2( 302.86, 735.242 )
 scale = Vector2( 0.4, 0.8 )
 pintura = Color( 0.0941176, 0.788235, 0.972549, 1 )
 herramienta_seleccionada = "aros"
 
 [node name="aro2" parent="pintables" instance=ExtResource( 4 )]
+visible = false
 position = Vector2( 986.874, 733.99 )
 scale = Vector2( 0.4, 0.8 )
 pintura = Color( 0.0941176, 0.788235, 0.972549, 1 )
 herramienta_seleccionada = "aros"
 
+[node name="ojo_def" parent="pintables" instance=ExtResource( 13 )]
+position = Vector2( 746.027, 578.01 )
+herramienta_seleccionada = "lentes de contacto"
+
+[node name="ojo_def2" parent="pintables" instance=ExtResource( 13 )]
+position = Vector2( 538.016, 577.972 )
+scale = Vector2( -1, 1 )
+herramienta_seleccionada = "lentes de contacto"
+
+[node name="aros_def" parent="pintables" instance=ExtResource( 14 )]
+position = Vector2( 873.983, 730.183 )
+pintura = Color( 0.780392, 0.509804, 0.0431373, 1 )
+herramienta_seleccionada = "aros"
+
+[node name="aros_def2" parent="pintables" instance=ExtResource( 14 )]
+position = Vector2( 425.965, 737.961 )
+pintura = Color( 0.780392, 0.509804, 0.0431373, 1 )
+herramienta_seleccionada = "aros"
+
+[node name="ceja_def" parent="pintables" instance=ExtResource( 15 )]
+position = Vector2( 530, 529.995 )
+scale = Vector2( -1, 1 )
+pintura = Color( 0.168627, 0.121569, 0.0196078, 1 )
+herramienta_seleccionada = "lapiz de cejas"
+
+[node name="ceja_def2" parent="pintables" instance=ExtResource( 15 )]
+position = Vector2( 753.992, 530 )
+pintura = Color( 0.168627, 0.121569, 0.0196078, 1 )
+herramienta_seleccionada = "lapiz de cejas"
+
+[node name="labio_inf_def" parent="pintables" instance=ExtResource( 16 )]
+position = Vector2( 642.009, 777.981 )
+pintura = Color( 0.792157, 0.533333, 0.509804, 1 )
+herramienta_seleccionada = "pinta labios"
+
+[node name="labio_sup_def" parent="pintables" instance=ExtResource( 17 )]
+position = Vector2( 642.019, 777.989 )
+pintura = Color( 0.792157, 0.533333, 0.509804, 1 )
+herramienta_seleccionada = "pinta labios"
+
 [node name="herramientas" type="Node2D" parent="."]
 
 [node name="herramienta" parent="herramientas" instance=ExtResource( 6 )]
-position = Vector2( 129.43, 500.109 )
+position = Vector2( 73.6321, 530.777 )
 scale = Vector2( 0.5, 0.5 )
 herramienta = "lapiz de cejas"
+imagen = ExtResource( 9 )
 
 [node name="herramienta2" parent="herramientas" instance=ExtResource( 6 )]
-position = Vector2( 124.225, 663.15 )
+position = Vector2( 73.5562, 795.544 )
 scale = Vector2( 0.5, 0.5 )
 herramienta = "lentes de contacto"
+imagen = ExtResource( 10 )
 
 [node name="herramienta3" parent="herramientas" instance=ExtResource( 6 )]
-position = Vector2( 121.964, 820.107 )
+position = Vector2( 71.4442, 658.509 )
 scale = Vector2( 0.5, 0.5 )
 herramienta = "aros"
 
 [node name="herramienta4" parent="herramientas" instance=ExtResource( 6 )]
-position = Vector2( 108.955, 967.965 )
+position = Vector2( 75.4088, 945.546 )
 scale = Vector2( 0.5, 0.5 )
 herramienta = "pinta labios"
+imagen = ExtResource( 11 )
 
 [node name="foto" type="Node2D" parent="."]
 
@@ -222,6 +287,7 @@ script = ExtResource( 8 )
 [node name="Extras" type="Node2D" parent="."]
 
 [node name="distractores" type="Node2D" parent="."]
+position = Vector2( 25.3984, 19.0488 )
 
 [node name="Boton" type="RigidBody2D" parent="distractores"]
 position = Vector2( 137.907, 347.29 )

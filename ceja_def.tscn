@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://sprites/ceja.png" type="Texture" id=1]
+[ext_resource path="res://ceja_def.gd" type="Script" id=2]
+
+[node name="ceja_def" type="StaticBody2D"]
+input_pickable = true
+script = ExtResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -35.1107, -22.746, -64.6217, -5.48479, -54.3763, 7.5446, -39.0083, 8.10141, -32.6607, 0.751495, 36.2726, -0.250765, 56.2064, 24.2489, 63.8904, 9.10367, 31.2613, -21.521 )
+
+[node name="ceja" type="Sprite" parent="."]
+scale = Vector2( 8, 8 )
+texture = ExtResource( 1 )

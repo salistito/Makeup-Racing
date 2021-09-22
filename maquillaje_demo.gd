@@ -33,4 +33,4 @@ func set_tool(herr):
 		
 func randomizer():
 	for elemento in pintables.get_children():
-		elemento.get_node("Polygon2D").color = lista[randi() % lista.size()]
+		elemento.pintura = lista[randi() % lista.size()]
