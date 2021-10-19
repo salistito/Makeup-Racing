@@ -1,0 +1,84 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/Niveles.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Fondo_Inicio.tscn" type="PackedScene" id=2]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Node2D" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 350 )
+scale = Vector2( 0.67, 0.67 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 0.422
+anchor_top = 0.14
+anchor_right = 0.57
+anchor_bottom = 0.506
+margin_left = 35.744
+margin_top = 656.64
+margin_right = 93.64
+margin_bottom = 340.856
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+margin_right = 361.0
+margin_bottom = 20.0
+focus_neighbour_top = NodePath("../ExitButton")
+text = "Back"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 900.0
+margin_top = 512.0
+margin_right = 1074.0
+margin_bottom = 605.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 57.0
+margin_bottom = 93.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nivel1" type="Button" parent="HBoxContainer/VBoxContainer2"]
+margin_right = 57.0
+margin_bottom = 20.0
+text = "Nivel 1"
+
+[node name="Nivel2" type="Button" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 24.0
+margin_right = 57.0
+margin_bottom = 44.0
+text = "Nivel 2"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 61.0
+margin_right = 118.0
+margin_bottom = 93.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nivel3" type="Button" parent="HBoxContainer/VBoxContainer3"]
+margin_right = 57.0
+margin_bottom = 20.0
+text = "Nivel 3"
+
+[node name="Nivel4" type="Button" parent="HBoxContainer/VBoxContainer3"]
+margin_top = 24.0
+margin_right = 57.0
+margin_bottom = 44.0
+text = "Nivel 4"
+
+[connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Nivel1" to="." method="_on_Nivel1_pressed"]
