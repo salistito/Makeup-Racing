@@ -14,7 +14,7 @@ func _on_BackButton_pressed():
 
 
 func _on_Nivel1_pressed():
-	get_tree().change_scene("res://scenes/main.tscn")
+	get_tree().change_scene("res://scenes/main1.tscn")
 	
 func _on_Nivel2_pressed():
 	get_tree().change_scene("res://scenes/main2.tscn")
