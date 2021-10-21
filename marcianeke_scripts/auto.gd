@@ -118,6 +118,7 @@ func locura():
 	t.start()
 	yield(t, "timeout")
 	print("locura aplicada")
+	
 	block = 0
 	Manager.principal.hide_distraction()
 	

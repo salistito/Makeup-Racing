@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://scenes/auto.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/Nivel_4.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/Nivel_2.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Dibujos/Montaña 2.png" type="Texture" id=8]
 [ext_resource path="res://Dibujos/Montaña 1.png" type="Texture" id=9]
 [ext_resource path="res://Dibujos/Arbustos.png" type="Texture" id=10]
@@ -20,7 +20,7 @@ script = ExtResource( 20 )
 [node name="Estructura_Nivel" parent="." instance=ExtResource( 2 )]
 
 [node name="russian_car" parent="." instance=ExtResource( 1 )]
-position = Vector2( -1361.97, 250.769 )
+position = Vector2( -2069.25, 229.985 )
 gravity_scale = 35.0
 
 [node name="Camera2D" type="Camera2D" parent="russian_car"]

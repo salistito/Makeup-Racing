@@ -11,3 +11,7 @@ func show_distraction():
 	
 func hide_distraction():
 	$CanvasLayer2/Sprite.visible = false
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://scenes/Niveles.tscn")

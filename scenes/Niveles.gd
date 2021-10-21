@@ -1,11 +1,5 @@
 extends Control
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -22,3 +16,11 @@ func _on_BackButton_pressed():
 func _on_Nivel1_pressed():
 	get_tree().change_scene("res://scenes/main.tscn")
 	
+func _on_Nivel2_pressed():
+	get_tree().change_scene("res://scenes/main2.tscn")
+	
+func _on_Nivel3_pressed():
+	get_tree().change_scene("res://scenes/main3.tscn")
+
+func _on_Nivel4_pressed():
+	get_tree().change_scene("res://scenes/main4.tscn")

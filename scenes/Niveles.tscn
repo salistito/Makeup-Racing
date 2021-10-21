@@ -82,3 +82,6 @@ text = "Nivel 4"
 
 [connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer2/Nivel1" to="." method="_on_Nivel1_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Nivel2" to="." method="_on_Nivel2_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Nivel3" to="." method="_on_Nivel3_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Nivel4" to="." method="_on_Nivel4_pressed"]
