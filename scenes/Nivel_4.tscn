@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
+[ext_resource path="res://marcianeke_scripts/niveles_meta.gd" type="Script" id=1]
 [ext_resource path="res://Maquillaje señal.tscn" type="PackedScene" id=9]
 
 [sub_resource type="CircleShape2D" id=1]
@@ -7,6 +8,9 @@ radius = 267.102
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 50.5016
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 296.318, 272.522 )
 
 [node name="Estructura_Nivel" type="Node2D"]
 
@@ -194,3 +198,13 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D13"]
 position = Vector2( 37315.7, 8128.15 )
 shape = SubResource( 2 )
+
+[node name="NivelMeta" type="Area2D" parent="."]
+position = Vector2( 38896.7, 8255.05 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="shapeMeta" type="CollisionShape2D" parent="NivelMeta"]
+shape = SubResource( 3 )

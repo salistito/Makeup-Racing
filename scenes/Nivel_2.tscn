@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=4 format=2]
 
+[ext_resource path="res://marcianeke_scripts/niveles_meta.gd" type="Script" id=1]
 [ext_resource path="res://Maquillaje señal.tscn" type="PackedScene" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 296.318, 272.522 )
 
 [node name="Estructura_Nivel" type="Node2D"]
 
@@ -46,3 +50,13 @@ polygon = PoolVector2Array( 12423.6, 757.879, 12577.5, 586.013, 12642.3, 401.587
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 position = Vector2( 2397.12, 608.167 )
 polygon = PoolVector2Array( 12290.9, 679.278, 13189.5, 683.6, 13185.2, 778.056, 12290.9, 764.708 )
+
+[node name="NivelMeta" type="Area2D" parent="."]
+position = Vector2( 31725.8, 2040.47 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="shapeMeta" type="CollisionShape2D" parent="NivelMeta"]
+shape = SubResource( 1 )
