@@ -6,6 +6,7 @@ onready var time_text := $TimerLayer/Countdown
 onready var victory_menu = $VictoryLayer/Panel
 onready var defeat_menu = $DefeatLayer/Panel
 onready var car := $Control/HBoxContainer/ViewportContainer/Viewport/Autito/russian_car
+onready var pause_popup = $Control/pause_popup
 var use_milliseconds = false
 
 func _ready():
@@ -39,6 +40,7 @@ func _on_RestartButtonLVL4_pressed() -> void:
 	get_tree().change_scene("res://scenes/main4.tscn")
 	
 func _on_MainMenuButton_pressed() -> void:
+	get_tree().paused =false
 	get_tree().change_scene("res://scenes/Menu.tscn")
 	
 func _on_ExitButton_pressed() -> void:
@@ -74,3 +76,19 @@ func on_body_entered(body: Node):
 	elif(countdown.time_left>0 and (!true or !true) and countdown.time_left<countdown.get_wait_time()): # (not goals or not maquillaje)
 		car.block = 1
 		defeat_menu.show()
+
+
+
+
+func _on_Pausa_pressed():
+	get_tree().paused = true
+	pause_popup.show()
+
+
+
+func _on_Unpause_pressed():
+	get_tree().paused =false
+	pause_popup.hide()
+
+
+
