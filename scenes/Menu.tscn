@@ -31,18 +31,21 @@ __meta__ = {
 }
 
 [node name="StartButton" type="TextureButton" parent="VBoxContainer"]
+pause_mode = 2
 margin_right = 670.0
 margin_bottom = 300.0
 focus_neighbour_top = NodePath("../ExitButton")
 texture_normal = ExtResource( 3 )
 
 [node name="OptionsButton" type="Button" parent="VBoxContainer"]
+pause_mode = 2
 margin_top = 304.0
 margin_right = 670.0
 margin_bottom = 324.0
 text = "Options"
 
 [node name="ExitButton" type="Button" parent="VBoxContainer"]
+pause_mode = 2
 margin_top = 328.0
 margin_right = 670.0
 margin_bottom = 348.0

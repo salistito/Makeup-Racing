@@ -29,6 +29,7 @@ __meta__ = {
 }
 
 [node name="BackButton" type="Button" parent="VBoxContainer"]
+pause_mode = 2
 margin_right = 361.0
 margin_bottom = 20.0
 focus_neighbour_top = NodePath("../ExitButton")
@@ -51,15 +52,17 @@ __meta__ = {
 }
 
 [node name="Nivel1" type="Button" parent="HBoxContainer/VBoxContainer2"]
+pause_mode = 2
 margin_right = 57.0
 margin_bottom = 20.0
 text = "Nivel 1"
 
-[node name="Nivel2" type="Button" parent="HBoxContainer/VBoxContainer2"]
+[node name="Nivel3" type="Button" parent="HBoxContainer/VBoxContainer2"]
+pause_mode = 2
 margin_top = 24.0
 margin_right = 57.0
 margin_bottom = 44.0
-text = "Nivel 2"
+text = "Nivel 3"
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
 margin_left = 61.0
@@ -69,12 +72,14 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Nivel3" type="Button" parent="HBoxContainer/VBoxContainer3"]
+[node name="Nivel2" type="Button" parent="HBoxContainer/VBoxContainer3"]
+pause_mode = 2
 margin_right = 57.0
 margin_bottom = 20.0
-text = "Nivel 3"
+text = "Nivel 2"
 
 [node name="Nivel4" type="Button" parent="HBoxContainer/VBoxContainer3"]
+pause_mode = 2
 margin_top = 24.0
 margin_right = 57.0
 margin_bottom = 44.0
@@ -82,6 +87,6 @@ text = "Nivel 4"
 
 [connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer2/Nivel1" to="." method="_on_Nivel1_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Nivel2" to="." method="_on_Nivel2_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Nivel3" to="." method="_on_Nivel3_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Nivel3" to="." method="_on_Nivel3_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Nivel2" to="." method="_on_Nivel2_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer3/Nivel4" to="." method="_on_Nivel4_pressed"]
