@@ -32,10 +32,10 @@ func _integrate_forces(state: Physics2DDirectBodyState) -> void:
 				apply_central_impulse(-transform.y * JUMP_FORCE)
 				change_state(ON_AIR)
 
-		ON_AIR:
-			if (chasis_contact or wheels_on_floor) and on_air_timer.is_stopped():
-				print("Yo no sabia que ibamos a caer aquí, tuve fé (QUEE!)")
-				change_state(ON_FLOOR)
+#		ON_AIR:
+#			if (chasis_contact or wheels_on_floor) and on_air_timer.is_stopped():
+#				print("Yo no sabia que ibamos a caer aquí, tuve fé (QUEE!)")
+#				change_state(ON_FLOOR)
 
 func change_state(target_state: int) -> void:
 	if not target_state in _transitions[_state]:
@@ -83,6 +83,9 @@ func cambiar_maquillaje(body: Node):
 func llegar_suelo(body: Node):
 	print("entramos al suelo")
 	wheels_on_floor = true
+	if wheels_on_floor and on_air_timer.is_stopped():
+		print("Yo no sabia que ibamos a caer aquí, tuve fé (QUEE!)")
+		change_state(ON_FLOOR)
 #	var llegada = OS.get_ticks_msec() 
 #	if (llegada - air_time) >1500:
 #		print(llegada-air_time)
