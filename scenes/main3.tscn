@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://scenes/Auto_demo3.tscn" type="PackedScene" id=1]
 [ext_resource path="res://marcianeke_scripts/main.gd" type="Script" id=2]
@@ -6,35 +6,39 @@
 [ext_resource path="res://Fonts/hf-free-complete/expression-pro-v1.1/ExpressionPro.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://scenes/maquillaje_demo.tscn" type="PackedScene" id=9]
 
-[sub_resource type="DynamicFont" id=12]
-size = 75
-font_data = ExtResource( 4 )
-
 [sub_resource type="DynamicFont" id=1]
-size = 100
+size = 75
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=2]
-size = 75
+size = 100
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=3]
 size = 75
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=4]
-size = 128
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=5]
-size = 100
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=6]
+[sub_resource type="DynamicFont" id=12]
 size = 75
 font_data = ExtResource( 4 )
 
+[sub_resource type="DynamicFont" id=4]
+size = 75
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 128
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 100
+font_data = ExtResource( 4 )
+
 [sub_resource type="DynamicFont" id=7]
+size = 75
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=15]
 size = 75
 font_data = ExtResource( 4 )
 
@@ -43,14 +47,22 @@ size = 75
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=9]
-size = 100
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=10]
 size = 75
 font_data = ExtResource( 4 )
 
+[sub_resource type="DynamicFont" id=10]
+size = 100
+font_data = ExtResource( 4 )
+
 [sub_resource type="DynamicFont" id=11]
+size = 75
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 75
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=14]
 size = 75
 font_data = ExtResource( 4 )
 
@@ -104,7 +116,7 @@ margin_left = 1800.0
 margin_top = 930.0
 margin_right = 2015.0
 margin_bottom = 1003.0
-custom_fonts/font = SubResource( 12 )
+custom_fonts/font = SubResource( 1 )
 text = "Pausa"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -136,7 +148,7 @@ __meta__ = {
 [node name="Label" type="Label" parent="Control/pause_popup/Panel/VBoxContainer"]
 margin_right = 863.0
 margin_bottom = 88.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "En pausa"
 
 [node name="Unpause" type="Button" parent="Control/pause_popup/Panel/VBoxContainer"]
@@ -144,15 +156,23 @@ pause_mode = 2
 margin_top = 92.0
 margin_right = 863.0
 margin_bottom = 165.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Continuar"
+
+[node name="LvlSelectorButton" type="Button" parent="Control/pause_popup/Panel/VBoxContainer"]
+pause_mode = 2
+margin_top = 169.0
+margin_right = 863.0
+margin_bottom = 242.0
+custom_fonts/font = SubResource( 12 )
+text = "Level Selector"
 
 [node name="MainMenuButton" type="Button" parent="Control/pause_popup/Panel/VBoxContainer"]
 pause_mode = 2
 margin_top = 92.0
 margin_right = 863.0
 margin_bottom = 165.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
 text = "Main Menu"
 
 [node name="ExitButton" type="Button" parent="Control/pause_popup/Panel/VBoxContainer"]
@@ -160,7 +180,7 @@ pause_mode = 2
 margin_top = 169.0
 margin_right = 863.0
 margin_bottom = 242.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 text = "Exit Game"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -205,7 +225,7 @@ autostart = true
 margin_top = 35.0
 margin_right = 175.0
 margin_bottom = 147.0
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -233,30 +253,36 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="DefeatLayer/Panel/VBoxContainer"]
 margin_right = 800.0
-margin_bottom = 179.0
-custom_fonts/font = SubResource( 5 )
-text = "Vuelve a intentarlo!
-"
+margin_bottom = 88.0
+custom_fonts/font = SubResource( 6 )
+text = "Vuelve a intentarlo!"
 
 [node name="RestartButton" type="Button" parent="DefeatLayer/Panel/VBoxContainer"]
-margin_top = 183.0
+margin_top = 92.0
 margin_right = 800.0
-margin_bottom = 256.0
-custom_fonts/font = SubResource( 6 )
+margin_bottom = 165.0
+custom_fonts/font = SubResource( 7 )
 text = "Restart"
 
-[node name="MainMenuButton" type="Button" parent="DefeatLayer/Panel/VBoxContainer"]
-margin_top = 260.0
+[node name="LvlSelectorButton" type="Button" parent="DefeatLayer/Panel/VBoxContainer"]
+margin_top = 169.0
 margin_right = 800.0
-margin_bottom = 333.0
-custom_fonts/font = SubResource( 7 )
+margin_bottom = 242.0
+custom_fonts/font = SubResource( 15 )
+text = "Level Selector"
+
+[node name="MainMenuButton" type="Button" parent="DefeatLayer/Panel/VBoxContainer"]
+margin_top = 246.0
+margin_right = 800.0
+margin_bottom = 319.0
+custom_fonts/font = SubResource( 8 )
 text = "Main Menu"
 
 [node name="ExitButton" type="Button" parent="DefeatLayer/Panel/VBoxContainer"]
-margin_top = 337.0
+margin_top = 323.0
 margin_right = 800.0
-margin_bottom = 410.0
-custom_fonts/font = SubResource( 8 )
+margin_bottom = 396.0
+custom_fonts/font = SubResource( 9 )
 text = "Exit Game"
 
 [node name="VictoryLayer" type="CanvasLayer" parent="."]
@@ -283,30 +309,48 @@ __meta__ = {
 [node name="Label" type="Label" parent="VictoryLayer/Panel/VBoxContainer"]
 margin_right = 863.0
 margin_bottom = 88.0
-custom_fonts/font = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
 text = "Felicidades, Ganaste!"
 
-[node name="MainMenuButton" type="Button" parent="VictoryLayer/Panel/VBoxContainer"]
+[node name="NextLvlButton" type="Button" parent="VictoryLayer/Panel/VBoxContainer"]
 margin_top = 92.0
 margin_right = 863.0
 margin_bottom = 165.0
-custom_fonts/font = SubResource( 10 )
-text = "Main Menu"
+custom_fonts/font = SubResource( 11 )
+text = "Next Level"
 
-[node name="ExitButton" type="Button" parent="VictoryLayer/Panel/VBoxContainer"]
+[node name="LvlSelectorButton" type="Button" parent="VictoryLayer/Panel/VBoxContainer"]
 margin_top = 169.0
 margin_right = 863.0
 margin_bottom = 242.0
-custom_fonts/font = SubResource( 11 )
+custom_fonts/font = SubResource( 12 )
+text = "Level Selector"
+
+[node name="MainMenuButton" type="Button" parent="VictoryLayer/Panel/VBoxContainer"]
+margin_top = 246.0
+margin_right = 863.0
+margin_bottom = 319.0
+custom_fonts/font = SubResource( 13 )
+text = "Main Menu"
+
+[node name="ExitButton" type="Button" parent="VictoryLayer/Panel/VBoxContainer"]
+margin_top = 323.0
+margin_right = 863.0
+margin_bottom = 396.0
+custom_fonts/font = SubResource( 14 )
 text = "Exit Game"
 
 [connection signal="pressed" from="Control/Pausa" to="." method="_on_Pausa_pressed"]
 [connection signal="pressed" from="Control/pause_popup/Panel/VBoxContainer/Unpause" to="." method="_on_Unpause_pressed"]
+[connection signal="pressed" from="Control/pause_popup/Panel/VBoxContainer/LvlSelectorButton" to="." method="_on_LvlSelectorButton_pressed"]
 [connection signal="pressed" from="Control/pause_popup/Panel/VBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
 [connection signal="pressed" from="Control/pause_popup/Panel/VBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="timeout" from="TimerLayer/LevelTimer" to="." method="_on_LevelTimer_timeout"]
 [connection signal="pressed" from="DefeatLayer/Panel/VBoxContainer/RestartButton" to="." method="_on_RestartButtonLVL3_pressed"]
+[connection signal="pressed" from="DefeatLayer/Panel/VBoxContainer/LvlSelectorButton" to="." method="_on_LvlSelectorButton_pressed"]
 [connection signal="pressed" from="DefeatLayer/Panel/VBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
 [connection signal="pressed" from="DefeatLayer/Panel/VBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
+[connection signal="pressed" from="VictoryLayer/Panel/VBoxContainer/NextLvlButton" to="." method="_on_ToLvl4Button_pressed"]
+[connection signal="pressed" from="VictoryLayer/Panel/VBoxContainer/LvlSelectorButton" to="." method="_on_LvlSelectorButton_pressed"]
 [connection signal="pressed" from="VictoryLayer/Panel/VBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
 [connection signal="pressed" from="VictoryLayer/Panel/VBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]

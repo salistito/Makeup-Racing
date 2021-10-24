@@ -24,7 +24,20 @@ func hide_distraction():
 
 
 
-func _on_Button_pressed():
+#func _on_Button_pressed():
+#	get_tree().change_scene("res://scenes/Niveles.tscn")
+
+func _on_ToLvl2Button_pressed() -> void:
+	get_tree().change_scene("res://scenes/main2.tscn")
+	
+func _on_ToLvl3Button_pressed() -> void:
+	get_tree().change_scene("res://scenes/main3.tscn")
+	
+func _on_ToLvl4Button_pressed() -> void:
+	get_tree().change_scene("res://scenes/main4.tscn")
+
+func _on_LvlSelectorButton_pressed() -> void:
+	get_tree().paused=false
 	get_tree().change_scene("res://scenes/Niveles.tscn")
 	
 func _on_RestartButtonLVL1_pressed() -> void:
@@ -74,6 +87,7 @@ func on_body_entered(body: Node):
 		car.block = 1
 		victory_menu.show()
 	elif(countdown.time_left>0 and (!true or !true) and countdown.time_left<countdown.get_wait_time()): # (not goals or not maquillaje)
+		countdown.set_paused(1)
 		car.block = 1
 		defeat_menu.show()
 
@@ -91,4 +105,7 @@ func _on_Unpause_pressed():
 	pause_popup.hide()
 
 
-
+func _physics_process(delta: float) -> void:
+	if Input.is_action_pressed("pause"):
+		get_tree().paused = true
+		pause_popup.show()
