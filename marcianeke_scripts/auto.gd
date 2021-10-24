@@ -77,7 +77,7 @@ func _physics_process(delta: float) -> void:
 
 func cambiar_maquillaje(body: Node):
 	if Manager.maquillaje and Manager.maquillaje.has_method("randomizer"):
-		Manager.maquillaje.randomizer()
+		Manager.maquillaje.randomizer(1)
 
 
 func llegar_suelo(body: Node):
@@ -97,12 +97,25 @@ func salir_suelo(body: Node):
 
 func locura():
 	print("aplicando locura")
-	Manager.principal.show_distraction()
 	block = 1
-	$r_wheel.angular_velocity = MOVE_SPEED*7
-	$l_wheel.angular_velocity = MOVE_SPEED*7
+	Manager.principal.show_distraction()
+	
+	var randomizer = randi()%3+1
+	
+	print(randomizer)
+	if randomizer == 1:
+		$r_wheel.angular_velocity = MOVE_SPEED*5
+		$l_wheel.angular_velocity = MOVE_SPEED*5
+	elif randomizer ==2:
+		$r_wheel.angular_velocity = -MOVE_SPEED*5
+		$l_wheel.angular_velocity = -MOVE_SPEED*5
+	elif randomizer == 3:
+		apply_central_impulse(-transform.y * JUMP_FORCE)
+		change_state(ON_AIR)
+	
+	
 	var t = Timer.new()
-	t.set_wait_time(4)
+	t.set_wait_time(1.5)
 	t.set_one_shot(true)
 	self.add_child(t)
 	t.start()

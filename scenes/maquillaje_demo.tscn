@@ -108,60 +108,6 @@ pintura = Color( 0.658824, 0.701961, 0.937255, 1 )
 
 [node name="pintables" type="Node2D" parent="."]
 
-[node name="ceja" parent="pintables" instance=ExtResource( 3 )]
-visible = false
-position = Vector2( 787.687, 369.294 )
-scale = Vector2( 0.5, 0.5 )
-pintura = Color( 0.378906, 0.29594, 0.0754852, 1 )
-herramienta_seleccionada = "lapiz de cejas"
-
-[node name="ceja2" parent="pintables" instance=ExtResource( 3 )]
-visible = false
-position = Vector2( 532.745, 375.375 )
-rotation = 3.14159
-scale = Vector2( 0.5, -0.5 )
-pintura = Color( 0.378906, 0.29594, 0.0754852, 1 )
-herramienta_seleccionada = "lapiz de cejas"
-
-[node name="Ojo" parent="pintables" instance=ExtResource( 4 )]
-visible = false
-position = Vector2( 810.511, 500.202 )
-pintura = Color( 0.0941176, 0.788235, 0.972549, 1 )
-herramienta_seleccionada = "lentes de contacto"
-
-[node name="Ojo2" parent="pintables" instance=ExtResource( 4 )]
-visible = false
-position = Vector2( 502.893, 512.041 )
-pintura = Color( 0.0588235, 0.929412, 0.94902, 1 )
-herramienta_seleccionada = "lentes de contacto"
-
-[node name="labio_superior" parent="pintables" instance=ExtResource( 5 )]
-visible = false
-position = Vector2( 640.641, 856.078 )
-pintura = Color( 0.996078, 0.686275, 0.686275, 1 )
-herramienta_seleccionada = "pinta labios"
-
-[node name="labio_superior2" parent="pintables" instance=ExtResource( 5 )]
-visible = false
-position = Vector2( 634.204, 869.882 )
-scale = Vector2( 0.7, -0.7 )
-pintura = Color( 0.968627, 0.615686, 0.615686, 1 )
-herramienta_seleccionada = "pinta labios"
-
-[node name="aro" parent="pintables" instance=ExtResource( 4 )]
-visible = false
-position = Vector2( 302.86, 735.242 )
-scale = Vector2( 0.4, 0.8 )
-pintura = Color( 0.0941176, 0.788235, 0.972549, 1 )
-herramienta_seleccionada = "aros"
-
-[node name="aro2" parent="pintables" instance=ExtResource( 4 )]
-visible = false
-position = Vector2( 986.874, 733.99 )
-scale = Vector2( 0.4, 0.8 )
-pintura = Color( 0.0941176, 0.788235, 0.972549, 1 )
-herramienta_seleccionada = "aros"
-
 [node name="ojo_def" parent="pintables" instance=ExtResource( 13 )]
 position = Vector2( 746.027, 578.01 )
 herramienta_seleccionada = "lentes de contacto"

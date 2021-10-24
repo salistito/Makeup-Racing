@@ -31,6 +31,13 @@ func set_tool(herr):
 	for pintable in pintables.get_children():
 		pintable.selected_tool = herr
 		
-func randomizer():
-	for elemento in pintables.get_children():
-		elemento.pintura = lista[randi() % lista.size()]
+func randomizer(datos):	
+	var arreglo = pintables.get_children()
+	print("chocamos, cambiaremos una vez")
+	while datos > 0:
+		print("ahora estamos en while")
+		var indice = randi()%len(arreglo)
+		
+		arreglo[indice].pintura = lista[randi() % lista.size()]
+		arreglo.remove(indice)
+		datos = datos - 1
