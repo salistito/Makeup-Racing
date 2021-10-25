@@ -1,6 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://marcianeke_scripts/niveles_meta.gd" type="Script" id=1]
+[ext_resource path="res://sprites/paint_grass.png" type="Texture" id=2]
+[ext_resource path="res://marcianeke_scripts/texturaNiveles.gd" type="Script" id=3]
+[ext_resource path="res://sprites/finish_line.png" type="Texture" id=4]
 [ext_resource path="res://Maquillaje señal.tscn" type="PackedScene" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
@@ -31,12 +34,30 @@ position = Vector2( 20007.1, 1966.43 )
 position = Vector2( 22.4043, -21.323 )
 polygon = PoolVector2Array( -2562.91, 539.689, -2567.3, -150.443, -2389.85, -157.994, -2393.63, 408.331, -522.51, 425.213, -525.147, 338.599, -238.365, 364.892, 42.9761, 429.509, 247.52, 458.05, 513.902, 524.645, 856.137, 579.59, 1812.15, 619.188, 2751.18, 539.992, 3124.54, 392.913, 3424.35, 325.031, 4023.98, 319.374, 4881.52, 337.948, 4886.01, 185.293, 5792.87, 194.392, 5792.96, 19.1691, 7153.38, 28.1487, 7430.19, 54.1386, 8176.91, 242.499, 8836.17, 612.494, 9221.96, 738.462, 9424, 599.277, 9531.76, 850.708, 9702.37, 698.053, 9846.05, 967.444, 9971.77, 837.239, 10079.5, 1021.32, 10201.6, 945.81, 10250.5, 1060.53, 10373.7, 1016.67, 10404, 1099.34, 10491.8, 1084.15, 10522.1, 1141.51, 10586.2, 1094.28, 10604.8, 1163.45, 10699.3, 1139.83, 10743.1, 1205.62, 10856.2, 1160.07, 10879.8, 1251.18, 10954, 1215.75, 10981, 1269.73, 11053.6, 1254.55, 11092.4, 1295.04, 11176.7, 1229.24, 11191.9, 1323.72, 11264.5, 1291.67, 11296.5, 1337.22, 11399.4, 1286.61, 11438.2, 1370.96, 11541.9, 1354.26, 11627.4, 1429.1, 11780.6, 1407.72, 11859, 1513.01, 13533, 1539.78, 13611.4, 1639.56, 13743.3, 1678.76, 15684.4, 1725.91, 15750.4, 1676.39, 15783.7, 1552.58, 15785.3, 1262.08, 16510.4, 1340.19, 17493.7, 1456.93, 18245.3, 1697.6, 18951.5, 1973.87, 19800.5, 2256.85, 21017.7, 2510.1, 21791.5, 2539.65, 23364.2, 2517.02, 24102.4, 2353.2, 24406.8, 2234.4, 24642.4, 2355.2, 25091, 2476.73, 27050.9, 2615.13, 28040.9, 2485.03, 28623.5, 2435.36, 28614.1, 2271.91, 29866.2, 2329.43, 31993.8, 2293.17, 31994.6, 1271.38, 32134.2, 1296.77, 32337.4, 3715.97, 29624.9, 3319.39, 28872.1, 4408.62, 23132.3, 4285.81, 11893.7, 3040.56, 8226.76, 2776.85, 5484.98, 2324.07, 1752, 1310.47, 414.29, 3650.76, -312.192, 1442.71, -1196.69, 1281.08, -2060.32, 748.578 )
 
+[node name="Polygon2D" type="Polygon2D" parent="StaticBody2D2/CollisionPolygon2D"]
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+
+[node name="Area2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+position = Vector2( 2397.12, 608.167 )
+polygon = PoolVector2Array( 12290.9, 679.278, 13189.5, 683.6, 13185.2, 778.056, 12290.9, 764.708 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Area2D/CollisionPolygon2D"]
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+
 [node name="Area2D3" type="StaticBody2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D3"]
 position = Vector2( 3724.98, 703.991 )
 scale = Vector2( 0.818203, 1.02255 )
 polygon = PoolVector2Array( 12290.9, 679.278, 13189.5, 683.6, 13185.2, 778.056, 12290.9, 764.708 )
+
+[node name="Polygon2D" type="Polygon2D" parent="Area2D3/CollisionPolygon2D"]
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
 
 [node name="Area2D2" type="StaticBody2D" parent="."]
 
@@ -45,11 +66,9 @@ position = Vector2( 14831.8, 1199.86 )
 scale = Vector2( 0.818203, 1.02255 )
 polygon = PoolVector2Array( 12423.6, 757.879, 12577.5, 586.013, 12642.3, 401.587, 12611.2, 237.883, 12520.5, 121.84, 12274.5, -19.0699, 12080.3, -91.5972, 11880.9, -101.958, 11559.7, -72.9471, 11342.2, 34.8075, 11212.7, 188.151, 11241.2, 380.865, 11318.9, 579.797, 11563, 803.866, 11124.5, 653.283, 10634, 24.0284, 11972.9, -419.447, 13333.8, 32.8102, 13189.5, 683.6, 13185.2, 778.056, 12825, 772.679, 12186.5, 902.615 )
 
-[node name="Area2D" type="StaticBody2D" parent="."]
-
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
-position = Vector2( 2397.12, 608.167 )
-polygon = PoolVector2Array( 12290.9, 679.278, 13189.5, 683.6, 13185.2, 778.056, 12290.9, 764.708 )
+[node name="Polygon2D" type="Polygon2D" parent="Area2D2/CollisionPolygon2D"]
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
 
 [node name="NivelMeta" type="Area2D" parent="."]
 position = Vector2( 31725.8, 2040.47 )
@@ -60,3 +79,8 @@ __meta__ = {
 
 [node name="shapeMeta" type="CollisionShape2D" parent="NivelMeta"]
 shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="NivelMeta"]
+position = Vector2( -0.794922, 80.1637 )
+scale = Vector2( 0.684367, 0.730142 )
+texture = ExtResource( 4 )
