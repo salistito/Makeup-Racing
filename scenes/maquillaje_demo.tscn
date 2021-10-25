@@ -130,7 +130,7 @@ herramienta_seleccionada = "aros"
 [node name="ceja_def" parent="pintables" instance=ExtResource( 15 )]
 position = Vector2( 530, 529.995 )
 scale = Vector2( -1, 1 )
-pintura = Color( 0, 0.0627451, 1, 1 )
+pintura = Color( 0.168627, 0.121569, 0.0196078, 1 )
 herramienta_seleccionada = "lapiz de cejas"
 
 [node name="ceja_def2" parent="pintables" instance=ExtResource( 15 )]
