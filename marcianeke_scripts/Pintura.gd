@@ -1,6 +1,7 @@
 extends RigidBody2D
 
 export(Color) var pintura
+export(String) var color
 
 signal color_selected
 
@@ -13,7 +14,7 @@ func _ready():
 
 func on_input_event(viewport, event: InputEvent, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == BUTTON_LEFT:
-		emit_signal("color_selected", pintura)
+		emit_signal("color_selected", pintura, color)
 #		get_parent().selected_color = pintura
 #		#$cuerpo.color = Color(get_parent().color)
 #		print("aaaa")

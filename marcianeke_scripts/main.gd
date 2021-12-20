@@ -41,15 +41,19 @@ func _on_LvlSelectorButton_pressed() -> void:
 	get_tree().change_scene("res://scenes/Niveles.tscn")
 	
 func _on_RestartButtonLVL1_pressed() -> void:
+	get_tree().paused=false
 	get_tree().change_scene("res://scenes/main1.tscn")
 	
 func _on_RestartButtonLVL2_pressed() -> void:
+	get_tree().paused=false
 	get_tree().change_scene("res://scenes/main2.tscn")
 
 func _on_RestartButtonLVL3_pressed() -> void:
+	get_tree().paused=false
 	get_tree().change_scene("res://scenes/main3.tscn")
 	
 func _on_RestartButtonLVL4_pressed() -> void:
+	get_tree().paused=false
 	get_tree().change_scene("res://scenes/main4.tscn")
 	
 func _on_MainMenuButton_pressed() -> void:
@@ -85,10 +89,10 @@ func on_body_entered(body: Node):
 	
 	
 	if body.name != "russian_car":
-		
 		return
 	var goals_left = ready_goals()
-	if(countdown.time_left>0 and true and true and countdown.time_left<countdown.get_wait_time() and goals_left): # and goals and maquillaje
+	
+	if(countdown.time_left>0 and accurate_makeup() and countdown.time_left<countdown.get_wait_time() and goals_left): # and goals and maquillaje
 		countdown.set_paused(1)
 		car.block = 1
 		victory_menu.show()
@@ -97,7 +101,7 @@ func on_body_entered(body: Node):
 	#	countdown.set_paused(1)
 	#	car.block = 1
 	#	defeat_menu.show()
-	elif(countdown.time_left<countdown.get_wait_time() or (not goals_left)): # (not goals or not maquillaje)
+	elif(countdown.time_left<countdown.get_wait_time() or (not goals_left) or (not accurate_makeup())): # (not goals or not maquillaje)
 		
 		countdown.set_paused(1)
 		car.block = 1
@@ -129,8 +133,8 @@ func accurate_makeup():
 	var todo_bem = true
 	
 	for i in range(0,len(lista_pintables)):
-		print(lista_pintables[i].pintura,lista_foto[i].color_parte)
-		if lista_pintables[i].pintura != lista_foto[i].color_parte:
+		print(lista_pintables[i].TrueColor,lista_foto[i].color)
+		if lista_pintables[i].TrueColor != lista_foto[i].color:
 			todo_bem = false
 	
 	return todo_bem
@@ -145,3 +149,6 @@ func ready_goals():
 	else:
 		return false
 	
+
+
+

@@ -94,34 +94,42 @@ texture = ExtResource( 12 )
 [node name="Pintura" parent="pinturas" instance=ExtResource( 1 )]
 position = Vector2( 433.422, 63.4792 )
 pintura = Color( 0.368627, 0.254902, 0.0705882, 1 )
+color = "Cafe"
 
 [node name="Pintura2" parent="pinturas" instance=ExtResource( 1 )]
 position = Vector2( 560.355, 64.4106 )
 pintura = Color( 0.0705882, 0.0941176, 0.215686, 1 )
+color = "Negro"
 
 [node name="Pintura3" parent="pinturas" instance=ExtResource( 1 )]
 position = Vector2( 686.152, 62.3453 )
 pintura = Color( 0.12549, 0.396078, 0.0627451, 1 )
+color = "Verde"
 
 [node name="Pintura4" parent="pinturas" instance=ExtResource( 1 )]
 position = Vector2( 812.336, 62.4466 )
 pintura = Color( 0.796078, 0.815686, 0.141176, 1 )
+color = "Amarillo"
 
 [node name="Pintura5" parent="pinturas" instance=ExtResource( 1 )]
 position = Vector2( 436.587, 188.871 )
 pintura = Color( 0.937255, 0.345098, 0.345098, 1 )
+color = "Rojo"
 
 [node name="Pintura6" parent="pinturas" instance=ExtResource( 1 )]
 position = Vector2( 562.303, 187.373 )
 pintura = Color( 0.960784, 0.360784, 0.937255, 1 )
+color = "Rosa"
 
 [node name="Pintura7" parent="pinturas" instance=ExtResource( 1 )]
 position = Vector2( 688.872, 186.158 )
 pintura = Color( 0.101961, 0.972549, 0.768627, 1 )
+color = "Cyan"
 
 [node name="Pintura8" parent="pinturas" instance=ExtResource( 1 )]
 position = Vector2( 816.371, 182.696 )
 pintura = Color( 0.658824, 0.701961, 0.937255, 1 )
+color = "Lila"
 
 [node name="pintables" type="Node2D" parent="."]
 
@@ -129,48 +137,64 @@ pintura = Color( 0.658824, 0.701961, 0.937255, 1 )
 position = Vector2( 449.551, 553.516 )
 scale = Vector2( 8, 8 )
 herramienta_seleccionada = "lapiz de cejas"
+color = "Negro"
+TrueColor = "Negro"
 
 [node name="ceja_derecha_sisisi" parent="pintables" instance=ExtResource( 15 )]
 position = Vector2( 609.425, 553.516 )
 scale = Vector2( 8, 8 )
 input_pickable = true
 herramienta_seleccionada = "lapiz de cejas"
+color = "Negro"
+TrueColor = "Negro"
 
 [node name="ojo izquierdo" parent="pintables" instance=ExtResource( 23 )]
 position = Vector2( 457.543, 649.533 )
 scale = Vector2( 8, 8 )
 input_pickable = true
 herramienta_seleccionada = "lentes de contacto"
+color = "Negro"
+TrueColor = "Negro"
 
 [node name="ojo derecho real" parent="pintables" instance=ExtResource( 13 )]
 position = Vector2( 657.651, 649.533 )
 scale = Vector2( 8, 8 )
 input_pickable = true
 herramienta_seleccionada = "lentes de contacto"
+color = "Negro"
+TrueColor = "Negro"
 
 [node name="aros_def2" parent="pintables" instance=ExtResource( 14 )]
 position = Vector2( 393.49, 721.561 )
 scale = Vector2( 8, 8 )
-pintura = Color( 0.780392, 0.509804, 0.0431373, 1 )
+pintura = Color( 0.952941, 0.960784, 0.0666667, 1 )
 herramienta_seleccionada = "aros"
+color = "Amarillo"
+TrueColor = "Amarillo"
 
 [node name="aros_def" parent="pintables" instance=ExtResource( 14 )]
 position = Vector2( 785.651, 769.681 )
 scale = Vector2( 8, 8 )
-pintura = Color( 0.780392, 0.509804, 0.0431373, 1 )
+pintura = Color( 0.968627, 0.976471, 0.0705882, 1 )
 herramienta_seleccionada = "aros"
+color = "Amarillo"
+TrueColor = "Amarillo"
 
 [node name="labio_sup_def" parent="pintables" instance=ExtResource( 17 )]
 position = Vector2( 569.551, 777.533 )
 scale = Vector2( 8, 8 )
-pintura = Color( 0.792157, 0.533333, 0.509804, 1 )
+pintura = Color( 0.941176, 0.568627, 0.960784, 1 )
 herramienta_seleccionada = "pinta labios"
+color = "Rosa"
+TrueColor = "Rosa"
 
 [node name="labio_inf_def" parent="pintables" instance=ExtResource( 16 )]
 position = Vector2( 569.571, 793.506 )
 scale = Vector2( 8, 8 )
-pintura = Color( 0.792157, 0.533333, 0.509804, 1 )
+pintura = Color( 0.921569, 0.603922, 0.976471, 1 )
 herramienta_seleccionada = "pinta labios"
+color = "Rosa"
+TrueColor = "Rosa"
 
 [node name="herramientas" type="Node2D" parent="."]
 
