@@ -7,7 +7,7 @@
 [ext_resource path="res://sprites/finish_line.png" type="Texture" id=5]
 [ext_resource path="res://Maquillaje señal.tscn" type="PackedScene" id=9]
 
-[sub_resource type="RectangleShape2D" id=3]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 296.318, 272.522 )
 
 [node name="Estructura_Nivel" type="Node2D"]
@@ -234,7 +234,7 @@ __meta__ = {
 }
 
 [node name="shapeMeta" type="CollisionShape2D" parent="NivelMeta"]
-shape = SubResource( 3 )
+shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="NivelMeta"]
 position = Vector2( -0.794922, 80.1637 )

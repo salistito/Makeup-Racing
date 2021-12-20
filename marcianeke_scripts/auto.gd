@@ -28,7 +28,9 @@ func _integrate_forces(state: Physics2DDirectBodyState) -> void:
 				wheels_on_floor=true
 				
 			if (chasis_contact or wheels_on_floor) and Input.is_action_just_pressed("jump"):
+				$Jump.play()
 				print("EN EL AIRE WEBONG")
+				
 				apply_central_impulse(-transform.y * JUMP_FORCE)
 				change_state(ON_AIR)
 
@@ -57,6 +59,9 @@ func _ready():
 	$Area2DChoque.connect("body_entered", self, "cambiar_maquillaje")
 	$tocar_suelo.connect("body_entered",self, "llegar_suelo")
 	$tocar_suelo.connect("body_exited",self, "salir_suelo")
+	
+
+	
 	Manager.auto = self
 
 func _physics_process(delta: float) -> void:
@@ -76,7 +81,10 @@ func _physics_process(delta: float) -> void:
 
 
 func cambiar_maquillaje(body: Node):
+	if body.name == "russian_car":
+		return
 	if Manager.maquillaje and Manager.maquillaje.has_method("randomizer"):
+		$Crash.play()
 		Manager.maquillaje.randomizer(1)
 
 

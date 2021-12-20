@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/First_Date_Level1(NC).mp3-65e134bc9e5edb4d1bf2babe91459d54.mp3str"
+
+[deps]
+
+source_file="res://Songs/First_Date_Level1(NC).mp3"
+dest_files=[ "res://.import/First_Date_Level1(NC).mp3-65e134bc9e5edb4d1bf2babe91459d54.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

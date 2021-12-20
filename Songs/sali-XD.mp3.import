@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sali-XD.mp3-5ec6b0fcd6723911b087b70b1feec368.mp3str"
+
+[deps]
+
+source_file="res://Songs/sali-XD.mp3"
+dest_files=[ "res://.import/sali-XD.mp3-5ec6b0fcd6723911b087b70b1feec368.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

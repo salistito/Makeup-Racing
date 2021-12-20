@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Wedding_Level1(NC).mp3-cf08876af7af572a1a7421e4c63e09ae.mp3str"
+
+[deps]
+
+source_file="res://Songs/Wedding_Level1(NC).mp3"
+dest_files=[ "res://.import/Wedding_Level1(NC).mp3-cf08876af7af572a1a7421e4c63e09ae.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

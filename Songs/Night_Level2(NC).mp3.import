@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Night_Level2(NC).mp3-564e7bf41304efb3aa393d42a7e86658.mp3str"
+
+[deps]
+
+source_file="res://Songs/Night_Level2(NC).mp3"
+dest_files=[ "res://.import/Night_Level2(NC).mp3-564e7bf41304efb3aa393d42a7e86658.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Boda.mp3-6794797cb15792f280bd7c398666fb45.mp3str"
+
+[deps]
+
+source_file="res://Songs/Boda.mp3"
+dest_files=[ "res://.import/Boda.mp3-6794797cb15792f280bd7c398666fb45.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

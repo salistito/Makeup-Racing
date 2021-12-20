@@ -1,16 +1,16 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://marcianeke_scripts/labio_inf_def.gd" type="Script" id=1]
-[ext_resource path="res://sprites/labio_inferior.png" type="Texture" id=2]
+[ext_resource path="res://sprites/labio_inferior_def.png" type="Texture" id=2]
 
 [node name="labio_inf_def" type="StaticBody2D"]
 input_pickable = true
 script = ExtResource( 1 )
 
 [node name="labio_inferior" type="Sprite" parent="."]
-scale = Vector2( 8, 8 )
 texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2( 0, 3.88915 )
-polygon = PoolVector2Array( -103.88, -15.8749, -56.264, -15.98, -56.1281, -7.41712, 56.7562, -7.13527, 56.7562, -15.0812, 103.565, -15.2316, 87.875, -1.76415, 60.5, 12.7359, 33.875, 19.9859, 10.0073, 20.1459, -46.25, 19.9859, -48.75, 10.1109, -70.25, 10.4859, -87.125, 2.73585, -98.3088, -12.196 )
+position = Vector2( 0.0606056, 0.614108 )
+scale = Vector2( 0.125138, 0.125138 )
+polygon = PoolVector2Array( 45.6276, -8.4384, 20.261, 12.4448, -24.0343, 12.9387, -39.3255, 2.774, -48.0527, -7.17774, 12.9739, -7.17774, 19.3215, -10.9641, 48.053, -25.998 )

@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://scenes/Auto_demo4.tscn" type="PackedScene" id=1]
 [ext_resource path="res://marcianeke_scripts/main.gd" type="Script" id=2]
 [ext_resource path="res://sprites/Selfies/selfie nivel 4.png" type="Texture" id=3]
 [ext_resource path="res://Fonts/hf-free-complete/expression-pro-v1.1/ExpressionPro.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Songs/Wawa_Level4.mp3" type="AudioStream" id=5]
 [ext_resource path="res://scenes/maquillaje_demo.tscn" type="PackedScene" id=9]
 
 [sub_resource type="DynamicFont" id=1]
@@ -323,6 +324,11 @@ margin_right = 863.0
 margin_bottom = 319.0
 custom_fonts/font = SubResource( 13 )
 text = "Exit Game"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -8.078
+autoplay = true
 
 [connection signal="pressed" from="Control/Pausa" to="." method="_on_Pausa_pressed"]
 [connection signal="pressed" from="Control/pause_popup/Panel/VBoxContainer/Unpause" to="." method="_on_Unpause_pressed"]

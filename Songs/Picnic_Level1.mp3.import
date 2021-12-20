@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Picnic_Level1.mp3-98e744b218c95b62c4297bf610fb4299.mp3str"
+
+[deps]
+
+source_file="res://Songs/Picnic_Level1.mp3"
+dest_files=[ "res://.import/Picnic_Level1.mp3-98e744b218c95b62c4297bf610fb4299.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

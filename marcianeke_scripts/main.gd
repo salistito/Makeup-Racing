@@ -82,17 +82,28 @@ func _on_LevelTimer_timeout() -> void:
 	
 # Función que se ejecuta cuando se llega a la meta
 func on_body_entered(body: Node):
-	if(countdown.time_left>0 and true and true and countdown.time_left<countdown.get_wait_time()): # and goals and maquillaje
+	
+	
+	if body.name != "russian_car":
+		
+		return
+	var goals_left = ready_goals()
+	if(countdown.time_left>0 and true and true and countdown.time_left<countdown.get_wait_time() and goals_left): # and goals and maquillaje
 		countdown.set_paused(1)
 		car.block = 1
 		victory_menu.show()
-	elif(countdown.time_left>0 and (!true or !true) and countdown.time_left<countdown.get_wait_time()): # (not goals or not maquillaje)
+
+	#elif(countdown.time_left>0 and (!true or !true) and countdown.time_left<countdown.get_wait_time()): # (not goals or not maquillaje)
+	#	countdown.set_paused(1)
+	#	car.block = 1
+	#	defeat_menu.show()
+	elif(countdown.time_left<countdown.get_wait_time() or (not goals_left)): # (not goals or not maquillaje)
+		
 		countdown.set_paused(1)
 		car.block = 1
 		defeat_menu.show()
-
-
-
+		
+	print(accurate_makeup())
 
 func _on_Pausa_pressed():
 	get_tree().paused = true
@@ -109,3 +120,28 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_pressed("pause"):
 		get_tree().paused = true
 		pause_popup.show()
+		
+func accurate_makeup():
+	var parte_maquillaje = Manager.maquillaje
+	var lista_pintables = parte_maquillaje.get_node("pintables").get_children()
+	var lista_foto = parte_maquillaje.get_node("foto/partes_cara").get_children()
+	
+	var todo_bem = true
+	
+	for i in range(0,len(lista_pintables)):
+		print(lista_pintables[i].pintura,lista_foto[i].color_parte)
+		if lista_pintables[i].pintura != lista_foto[i].color_parte:
+			todo_bem = false
+	
+	return todo_bem
+	
+		
+func ready_goals():
+	var nivel = Manager.nivel
+	
+	if len(nivel.tasks) <=0:
+		return true
+		
+	else:
+		return false
+	

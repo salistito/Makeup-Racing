@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Baby.mp3-fe58bdfb4a4a36472d0e0f6868ddfe69.mp3str"
+
+[deps]
+
+source_file="res://Songs/Baby.mp3"
+dest_files=[ "res://.import/Baby.mp3-fe58bdfb4a4a36472d0e0f6868ddfe69.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

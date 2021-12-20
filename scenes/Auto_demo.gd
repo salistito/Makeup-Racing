@@ -16,12 +16,12 @@ func _ready():
 func add_task():
 	tasks += [1]
 	print("anadimos task")
-	Manager.goals.get_children()[1].text = str(len(tasks)) + " - Goals restantes"
+	Manager.goals.get_children()[1].text = str(len(tasks)) 
 	
 	print(tasks)
 	
 func remove_task():
 	print("empezamos a remover un task")
 	tasks.pop_back()
-	Manager.goals.get_children()[1].text = str(len(tasks)) + " - Goals restantes"
+	Manager.goals.get_children()[1].text = str(len(tasks))
 	print(tasks)

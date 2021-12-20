@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Crash1.mp3-e752313698dba7eb2fc7659ff86c452d.mp3str"
+
+[deps]
+
+source_file="res://Sound Effects/Crash1.mp3"
+dest_files=[ "res://.import/Crash1.mp3-e752313698dba7eb2fc7659ff86c452d.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

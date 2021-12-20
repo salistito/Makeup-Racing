@@ -1,10 +1,11 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://sprites/Selfies/selfie nivel 1.png" type="Texture" id=1]
 [ext_resource path="res://marcianeke_scripts/main.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Auto_demo.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/maquillaje_demo.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Fonts/hf-free-complete/expression-pro-v1.1/ExpressionPro.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Songs/First_Date_Level2(NC).mp3" type="AudioStream" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 75
@@ -28,6 +29,10 @@ font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=6]
 size = 128
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 60
 font_data = ExtResource( 5 )
 
 [sub_resource type="DynamicFont" id=7]
@@ -202,10 +207,22 @@ one_shot = true
 autostart = true
 
 [node name="Countdown" type="Label" parent="TimerLayer"]
-margin_top = 35.0
-margin_right = 175.0
-margin_bottom = 147.0
+margin_left = 20.2165
+margin_top = 45.7029
+margin_right = 195.217
+margin_bottom = 157.703
 custom_fonts/font = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TimerLayer"]
+margin_left = 23.1896
+margin_top = 7.13525
+margin_right = 264.19
+margin_bottom = 61.1352
+custom_fonts/font = SubResource( 11 )
+text = "Time left:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -319,6 +336,11 @@ margin_right = 863.0
 margin_bottom = 396.0
 custom_fonts/font = SubResource( 5 )
 text = "Exit Game"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -18.175
+autoplay = true
 
 [connection signal="pressed" from="Control/Pausa" to="." method="_on_Pausa_pressed"]
 [connection signal="pressed" from="Control/pause_popup/Panel/VBoxContainer/Unpause" to="." method="_on_Unpause_pressed"]

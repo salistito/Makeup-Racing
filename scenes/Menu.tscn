@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Fondo_Inicio.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Dibujos/Start.png" type="Texture" id=3]
+[ext_resource path="res://Songs/Main_Menu1.mp3" type="AudioStream" id=4]
 
 [node name="Menu" type="Control"]
 anchor_top = 0.5
@@ -51,6 +52,10 @@ margin_right = 670.0
 margin_bottom = 348.0
 focus_neighbour_bottom = NodePath("../StartButton")
 text = "Exit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
 [connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
