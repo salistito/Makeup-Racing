@@ -15,6 +15,10 @@ font_data = ExtResource( 4 )
 size = 100
 font_data = ExtResource( 4 )
 
+[sub_resource type="DynamicFont" id=8]
+size = 75
+font_data = ExtResource( 4 )
+
 [sub_resource type="DynamicFont" id=3]
 size = 75
 font_data = ExtResource( 4 )
@@ -33,10 +37,6 @@ font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=7]
 size = 100
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=8]
-size = 75
 font_data = ExtResource( 4 )
 
 [sub_resource type="DynamicFont" id=9]
@@ -151,6 +151,14 @@ margin_right = 863.0
 margin_bottom = 88.0
 custom_fonts/font = SubResource( 2 )
 text = "En pausa"
+
+[node name="RestartButton" type="Button" parent="Control/pause_popup/Panel/VBoxContainer"]
+pause_mode = 2
+margin_top = 92.0
+margin_right = 800.0
+margin_bottom = 165.0
+custom_fonts/font = SubResource( 8 )
+text = "Restart"
 
 [node name="Unpause" type="Button" parent="Control/pause_popup/Panel/VBoxContainer"]
 pause_mode = 2
@@ -346,6 +354,7 @@ volume_db = -8.078
 autoplay = true
 
 [connection signal="pressed" from="Control/Pausa" to="." method="_on_Pausa_pressed"]
+[connection signal="pressed" from="Control/pause_popup/Panel/VBoxContainer/RestartButton" to="." method="_on_RestartButtonLVL3_pressed"]
 [connection signal="pressed" from="Control/pause_popup/Panel/VBoxContainer/Unpause" to="." method="_on_Unpause_pressed"]
 [connection signal="pressed" from="Control/pause_popup/Panel/VBoxContainer/LvlSelectorButton" to="." method="_on_LvlSelectorButton_pressed"]
 [connection signal="pressed" from="Control/pause_popup/Panel/VBoxContainer/MainMenuButton" to="." method="_on_MainMenuButton_pressed"]
