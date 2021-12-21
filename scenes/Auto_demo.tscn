@@ -21,7 +21,6 @@ script = ExtResource( 20 )
 position = Vector2( -14.4957, 10.9602 )
 
 [node name="russian_car" parent="." instance=ExtResource( 1 )]
-
 position = Vector2( -1622.83, 292.998 )
 gravity_scale = 35.0
 

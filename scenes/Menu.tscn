@@ -1,9 +1,32 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Fondo_Inicio.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Dibujos/Start.png" type="Texture" id=3]
 [ext_resource path="res://Songs/Main_Menu1.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Fonts/hf-free-complete/expression-pro-v1.1/ExpressionPro.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Fonts/Racing/Torque-Master.otf" type="DynamicFontData" id=6]
+[ext_resource path="res://Fonts/hf-free-complete/expression-pro-v1.1/ExpressionPro.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://Fonts/Makeup/FatPix-SVG.ttf" type="DynamicFontData" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 150
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 250
+use_mipmaps = true
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 200
+outline_size = 1
+outline_color = Color( 1, 0, 0, 1 )
+font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 75
+font_data = ExtResource( 5 )
 
 [node name="Menu" type="Control"]
 anchor_top = 0.5
@@ -18,45 +41,99 @@ __meta__ = {
 position = Vector2( 0, -150 )
 scale = Vector2( 0.67, 0.67 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-anchor_left = 0.347
-anchor_top = 0.14
-anchor_right = 0.504
-anchor_bottom = 0.506
-margin_left = -50.0
-margin_top = -45.0
-margin_right = 32.0
-margin_bottom = 61.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="StartButton" type="TextureButton" parent="VBoxContainer"]
-pause_mode = 2
-margin_right = 670.0
-margin_bottom = 300.0
-focus_neighbour_top = NodePath("../ExitButton")
-texture_normal = ExtResource( 3 )
-
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
-pause_mode = 2
-margin_top = 304.0
-margin_right = 670.0
-margin_bottom = 324.0
-text = "Options"
-
-[node name="ExitButton" type="Button" parent="VBoxContainer"]
-pause_mode = 2
-margin_top = 328.0
-margin_right = 670.0
-margin_bottom = 348.0
-focus_neighbour_bottom = NodePath("../StartButton")
-text = "Exit"
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 autoplay = true
 
-[connection signal="pressed" from="VBoxContainer/StartButton" to="." method="_on_StartButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/OptionsButton" to="." method="_on_OptionsButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
+[node name="MenuLayer" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="MenuLayer"]
+visible = false
+margin_left = 425.0
+margin_top = 200.0
+margin_right = 1625.0
+margin_bottom = 800.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuLayer"]
+anchor_left = 0.0675
+anchor_top = 0.06
+anchor_right = 0.949167
+anchor_bottom = 0.97
+margin_left = 11.76
+margin_top = 174.56
+margin_right = 11.76
+margin_bottom = 493.56
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuLayer/VBoxContainer"]
+margin_right = 1838.0
+margin_bottom = 250.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="welcomeTo" type="Label" parent="MenuLayer/VBoxContainer/HBoxContainer"]
+visible = false
+margin_right = 659.0
+margin_bottom = 133.0
+custom_fonts/font = SubResource( 1 )
+text = "Welcome to"
+
+[node name="makeup" type="Label" parent="MenuLayer/VBoxContainer/HBoxContainer"]
+margin_right = 927.0
+margin_bottom = 250.0
+custom_colors/font_color = Color( 1, 0, 0.819608, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Makeup"
+
+[node name="racing" type="Label" parent="MenuLayer/VBoxContainer/HBoxContainer"]
+margin_left = 931.0
+margin_top = 30.0
+margin_right = 1838.0
+margin_bottom = 220.0
+custom_colors/font_color = Color( 0.313726, 0, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.431373, 0.0156863, 0.0156863, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Racing"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MenuLayer/VBoxContainer"]
+margin_top = 254.0
+margin_right = 1838.0
+margin_bottom = 481.0
+
+[node name="StartButton" type="TextureButton" parent="MenuLayer/VBoxContainer/VBoxContainer2"]
+pause_mode = 2
+visible = false
+margin_right = 1058.0
+margin_bottom = 300.0
+texture_normal = ExtResource( 3 )
+
+[node name="StartButton2" type="Button" parent="MenuLayer/VBoxContainer/VBoxContainer2"]
+margin_right = 1838.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 2 )
+text = "Start"
+
+[node name="OptionsButton" type="Button" parent="MenuLayer/VBoxContainer/VBoxContainer2"]
+margin_top = 77.0
+margin_right = 1838.0
+margin_bottom = 150.0
+custom_fonts/font = SubResource( 2 )
+text = "Credits"
+
+[node name="ExitButton" type="Button" parent="MenuLayer/VBoxContainer/VBoxContainer2"]
+margin_top = 154.0
+margin_right = 1838.0
+margin_bottom = 227.0
+custom_fonts/font = SubResource( 2 )
+text = "Exit Game"
+
+[connection signal="pressed" from="MenuLayer/VBoxContainer/VBoxContainer2/StartButton" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="MenuLayer/VBoxContainer/VBoxContainer2/StartButton2" to="." method="_on_StartButton_pressed"]
+[connection signal="pressed" from="MenuLayer/VBoxContainer/VBoxContainer2/OptionsButton" to="." method="_on_OptionsButton_pressed"]
+[connection signal="pressed" from="MenuLayer/VBoxContainer/VBoxContainer2/ExitButton" to="." method="_on_ExitButton_pressed"]
