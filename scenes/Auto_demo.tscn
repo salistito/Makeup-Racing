@@ -1,7 +1,9 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/auto.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Nivel_1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Sprites_nivel1/Background_1.png" type="Texture" id=3]
+[ext_resource path="res://Sprites_nivel1/Background_2.png" type="Texture" id=4]
 [ext_resource path="res://Dibujos/Montaña 2.png" type="Texture" id=8]
 [ext_resource path="res://Dibujos/Montaña 1.png" type="Texture" id=9]
 [ext_resource path="res://Dibujos/Arbustos.png" type="Texture" id=10]
@@ -16,6 +18,161 @@
 
 [node name="Autito" type="Node2D"]
 script = ExtResource( 20 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 7431.0
+margin_top = 1412.0
+margin_right = 24525.0
+margin_bottom = 5227.0
+color = Color( 0.580392, 0.839216, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background2" type="Sprite" parent="."]
+position = Vector2( -1406.4, -1010.09 )
+scale = Vector2( 20, 20 )
+texture = ExtResource( 4 )
+
+[node name="Background2" type="Sprite" parent="Background2"]
+position = Vector2( 495.418, -0.420885 )
+texture = ExtResource( 4 )
+
+[node name="Background3" type="Sprite" parent="Background2"]
+position = Vector2( 989.552, 26.6062 )
+texture = ExtResource( 4 )
+
+[node name="Background4" type="Sprite" parent="Background2"]
+position = Vector2( 1485.32, 93.4436 )
+texture = ExtResource( 4 )
+
+[node name="Background5" type="Sprite" parent="Background2"]
+position = Vector2( 1970.48, 93.4436 )
+texture = ExtResource( 4 )
+
+[node name="Montaña1" type="Sprite" parent="."]
+position = Vector2( -3211.05, -213.218 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 9 )
+
+[node name="Montaña1" type="Sprite" parent="Montaña1"]
+position = Vector2( 253.471, 27.4523 )
+texture = ExtResource( 9 )
+
+[node name="Montaña2" type="Sprite" parent="Montaña1"]
+position = Vector2( 623.468, 63.7599 )
+texture = ExtResource( 9 )
+
+[node name="Montaña3" type="Sprite" parent="Montaña1"]
+position = Vector2( 839.546, 58.9859 )
+texture = ExtResource( 9 )
+
+[node name="Montaña4" type="Sprite" parent="Montaña1"]
+position = Vector2( 1083.49, 99.571 )
+texture = ExtResource( 9 )
+
+[node name="Montaña5" type="Sprite" parent="Montaña1"]
+position = Vector2( 1289.22, 143.668 )
+texture = ExtResource( 9 )
+
+[node name="Montaña6" type="Sprite" parent="Montaña1"]
+position = Vector2( 1493.44, 189.51 )
+texture = ExtResource( 9 )
+
+[node name="Montaña7" type="Sprite" parent="Montaña1"]
+position = Vector2( 1748.64, 218.31 )
+texture = ExtResource( 9 )
+
+[node name="Montaña8" type="Sprite" parent="Montaña1"]
+position = Vector2( 2057.47, 221.51 )
+texture = ExtResource( 9 )
+
+[node name="Montaña9" type="Sprite" parent="Montaña1"]
+position = Vector2( 2196.67, 207.91 )
+texture = ExtResource( 9 )
+
+[node name="Montaña10" type="Sprite" parent="Montaña1"]
+position = Vector2( 2565.03, 247.453 )
+texture = ExtResource( 9 )
+
+[node name="Montaña11" type="Sprite" parent="Montaña1"]
+position = Vector2( 2942.47, 282.204 )
+texture = ExtResource( 9 )
+
+[node name="Montaña12" type="Sprite" parent="Montaña1"]
+position = Vector2( 3125.54, 264.405 )
+texture = ExtResource( 9 )
+
+[node name="Montaña13" type="Sprite" parent="Montaña1"]
+position = Vector2( 3314.28, 240.673 )
+texture = ExtResource( 9 )
+
+[node name="Montaña14" type="Sprite" parent="Montaña1"]
+position = Vector2( 3501.08, 216.093 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 9 )
+
+[node name="ColorRect2" type="ColorRect" parent="Montaña1"]
+margin_left = 906.391
+margin_top = 149.324
+margin_right = 1418.39
+margin_bottom = 325.324
+color = Color( 0.239216, 0.317647, 0.65098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect3" type="ColorRect" parent="Montaña1"]
+margin_left = 2433.0
+margin_top = 297.0
+margin_right = 3012.0
+margin_bottom = 473.0
+color = Color( 0.239216, 0.317647, 0.65098, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Background1" type="Sprite" parent="."]
+visible = false
+position = Vector2( -1248.45, -464.55 )
+scale = Vector2( 10, 10 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Background2" type="Sprite" parent="Background1"]
+position = Vector2( 933.288, 159.272 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 3 )
+
+[node name="Background1" type="Sprite" parent="Background1"]
+position = Vector2( 493.335, -4.76837e-06 )
+texture = ExtResource( 3 )
+
+[node name="Background3" type="Sprite" parent="Background1"]
+position = Vector2( 1076.16, 263.437 )
+texture = ExtResource( 3 )
+
+[node name="Background4" type="Sprite" parent="Background1"]
+position = Vector2( 1425.22, 182.079 )
+texture = ExtResource( 3 )
+
+[node name="Background5" type="Sprite" parent="Background1"]
+position = Vector2( 1914.82, 182.079 )
+texture = ExtResource( 3 )
+
+[node name="Background6" type="Sprite" parent="Background1"]
+position = Vector2( 2399.35, 260.479 )
+texture = ExtResource( 3 )
+
+[node name="Background7" type="Sprite" parent="Background1"]
+position = Vector2( 2893.75, 257.279 )
+texture = ExtResource( 3 )
+
+[node name="Background8" type="Sprite" parent="Background1"]
+position = Vector2( 3386.73, 247.679 )
+texture = ExtResource( 3 )
 
 [node name="Estructura_Nivel" parent="." instance=ExtResource( 2 )]
 position = Vector2( -14.4957, 10.9602 )
@@ -35,10 +192,12 @@ __meta__ = {
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_scale = Vector2( 0, 1 )
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
+visible = false
 position = Vector2( 17.156, 391.354 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 11 )
@@ -47,9 +206,11 @@ __meta__ = {
 }
 
 [node name="ParallaxLayer11" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_scale = Vector2( 0, 1 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer11"]
+visible = false
 position = Vector2( 1088.09, 478.667 )
 scale = Vector2( 7.1338, 9.96863 )
 texture = ExtResource( 17 )
@@ -58,10 +219,12 @@ __meta__ = {
 }
 
 [node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_scale = Vector2( 0.1, 1 )
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
+visible = false
 position = Vector2( 17.156, 536.623 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 9 )
@@ -70,10 +233,12 @@ __meta__ = {
 }
 
 [node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_scale = Vector2( 0.2, 1 )
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+visible = false
 position = Vector2( 17.156, 536.623 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 8 )
@@ -82,10 +247,12 @@ __meta__ = {
 }
 
 [node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_scale = Vector2( 0.3, 1.1 )
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+visible = false
 position = Vector2( 318.43, 479.517 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 10 )
@@ -94,10 +261,12 @@ __meta__ = {
 }
 
 [node name="ParallaxLayer6" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_scale = Vector2( 1.05, 1 )
 motion_mirroring = Vector2( 1440, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer6"]
+visible = false
 position = Vector2( -35.0531, 435.111 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 12 )
@@ -106,10 +275,12 @@ __meta__ = {
 }
 
 [node name="ParallaxLayer7" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_scale = Vector2( 1.1, 1 )
 motion_mirroring = Vector2( 1600, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer7"]
+visible = false
 position = Vector2( 912.453, 135.899 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 13 )
@@ -118,9 +289,11 @@ __meta__ = {
 }
 
 [node name="ParallaxLayer8" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_mirroring = Vector2( 1024, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer8"]
+visible = false
 position = Vector2( 385.269, 620.338 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 14 )
@@ -129,17 +302,21 @@ __meta__ = {
 }
 
 [node name="ParallaxLayer9" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_mirroring = Vector2( 1200, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer9"]
+visible = false
 position = Vector2( 662.778, 596.445 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 15 )
 
 [node name="ParallaxLayer10" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
 motion_mirroring = Vector2( 1100, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer10"]
+visible = false
 position = Vector2( 1000.55, 606.528 )
 scale = Vector2( 8, 8 )
 texture = ExtResource( 16 )

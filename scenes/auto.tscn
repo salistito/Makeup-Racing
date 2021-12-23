@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://marcianeke_scripts/auto.gd" type="Script" id=1]
-[ext_resource path="res://sprites/capo.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Auto.png" type="Texture" id=2]
 [ext_resource path="res://sprites/rueda.png" type="Texture" id=3]
 [ext_resource path="res://Sound Effects/jump1.wav" type="AudioStream" id=4]
 [ext_resource path="res://Sound Effects/Crash1.mp3" type="AudioStream" id=5]
@@ -41,8 +41,8 @@ scale = Vector2( 0.961186, 0.868207 )
 polygon = PoolVector2Array( 16.4131, -17.1394, 21.9488, -11.3918, 29.256, -10.9128, 42.5418, -7.56006, 46.749, -2.29144, 47.4132, 7.52736, 39.2203, -5.88368, -34.5158, -9.23644, -42.7087, 7.76684, -42.2659, -10.1944, -28.5372, -24.5633, -19.0157, -24.8028, -7.27995, -24.8028, 8.22015, -24.3239 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 0.594591, 27.9464 )
-scale = Vector2( 3.32232, 3.40085 )
+position = Vector2( 7.67357, 8.59697 )
+scale = Vector2( 5.4, 5.4 )
 texture = ExtResource( 2 )
 
 [node name="l_wheel" type="RigidBody2D" parent="."]
