@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Niveles.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Fondo_Inicio.tscn" type="PackedScene" id=2]
+[ext_resource path="res://sprites/Niveles Inicio/Level1.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Niveles Inicio/Level3.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Niveles Inicio/Level2.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Niveles Inicio/Level4.png" type="Texture" id=6]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -36,57 +40,54 @@ focus_neighbour_top = NodePath("../ExitButton")
 text = "Back"
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_left = 900.0
-margin_top = 512.0
-margin_right = 1074.0
-margin_bottom = 605.0
+margin_left = 543.0
+margin_top = 110.0
+margin_right = 675.0
+margin_bottom = 178.0
+rect_scale = Vector2( 8, 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="HBoxContainer"]
-margin_right = 57.0
-margin_bottom = 93.0
+margin_right = 64.0
+margin_bottom = 68.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Nivel1" type="Button" parent="HBoxContainer/VBoxContainer2"]
-pause_mode = 2
-margin_right = 57.0
-margin_bottom = 20.0
-text = "Nivel 1"
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer2"]
+margin_right = 64.0
+margin_bottom = 32.0
+texture_normal = ExtResource( 3 )
 
-[node name="Nivel3" type="Button" parent="HBoxContainer/VBoxContainer2"]
-pause_mode = 2
-margin_top = 24.0
-margin_right = 57.0
-margin_bottom = 44.0
-text = "Nivel 3"
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer/VBoxContainer2"]
+margin_top = 36.0
+margin_right = 64.0
+margin_bottom = 68.0
+texture_normal = ExtResource( 4 )
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
-margin_left = 61.0
-margin_right = 118.0
-margin_bottom = 93.0
+margin_left = 68.0
+margin_right = 132.0
+margin_bottom = 68.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Nivel2" type="Button" parent="HBoxContainer/VBoxContainer3"]
-pause_mode = 2
-margin_right = 57.0
-margin_bottom = 20.0
-text = "Nivel 2"
+[node name="TextureButton" type="TextureButton" parent="HBoxContainer/VBoxContainer3"]
+margin_right = 64.0
+margin_bottom = 32.0
+texture_normal = ExtResource( 5 )
 
-[node name="Nivel4" type="Button" parent="HBoxContainer/VBoxContainer3"]
-pause_mode = 2
-margin_top = 24.0
-margin_right = 57.0
-margin_bottom = 44.0
-text = "Nivel 4"
+[node name="TextureButton2" type="TextureButton" parent="HBoxContainer/VBoxContainer3"]
+margin_top = 36.0
+margin_right = 64.0
+margin_bottom = 68.0
+texture_normal = ExtResource( 6 )
 
 [connection signal="pressed" from="VBoxContainer/BackButton" to="." method="_on_BackButton_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Nivel1" to="." method="_on_Nivel1_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer2/Nivel3" to="." method="_on_Nivel3_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Nivel2" to="." method="_on_Nivel2_pressed"]
-[connection signal="pressed" from="HBoxContainer/VBoxContainer3/Nivel4" to="." method="_on_Nivel4_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/TextureButton" to="." method="_on_Nivel1_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer2/TextureButton2" to="." method="_on_Nivel3_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer3/TextureButton" to="." method="_on_Nivel2_pressed"]
+[connection signal="pressed" from="HBoxContainer/VBoxContainer3/TextureButton2" to="." method="_on_Nivel4_pressed"]
