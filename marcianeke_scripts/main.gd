@@ -95,6 +95,7 @@ func on_body_entered(body: Node):
 	if(countdown.time_left>0 and accurate_makeup() and countdown.time_left<countdown.get_wait_time() and goals_left): # and goals and maquillaje
 		countdown.set_paused(1)
 		car.block = 1
+		Manager.block2 = false
 		victory_menu.show()
 
 	#elif(countdown.time_left>0 and (!true or !true) and countdown.time_left<countdown.get_wait_time()): # (not goals or not maquillaje)

@@ -8,7 +8,9 @@ extends Control
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$MenuLayer/VBoxContainer/VBoxContainer2/StartButton2.grab_focus()
+	#$MenuLayer/VBoxContainer/VBoxContainer2/Start_Button.grab_focus()
+	$MenuLayer/VBoxContainer2/Start_Button.grab_focus()
+
 	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

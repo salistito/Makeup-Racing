@@ -8,3 +8,6 @@ var boton
 var niveles_meta
 var goals
 
+var block2 = false
+var block3 = false
+var block4 = false

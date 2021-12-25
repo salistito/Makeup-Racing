@@ -109,7 +109,6 @@ texture = ExtResource( 9 )
 
 [node name="Montaña14" type="Sprite" parent="Montaña1"]
 position = Vector2( 3501.08, 216.093 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 9 )
 
 [node name="ColorRect2" type="ColorRect" parent="Montaña1"]
@@ -143,7 +142,6 @@ __meta__ = {
 
 [node name="Background2" type="Sprite" parent="Background1"]
 position = Vector2( 933.288, 159.272 )
-scale = Vector2( 1, 1 )
 texture = ExtResource( 3 )
 
 [node name="Background1" type="Sprite" parent="Background1"]
