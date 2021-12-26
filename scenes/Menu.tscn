@@ -108,10 +108,10 @@ custom_fonts/font = SubResource( 3 )
 text = "Racing"
 
 [node name="VBoxContainer2" type="HBoxContainer" parent="MenuLayer"]
-margin_left = -4490.26
-margin_top = 554.177
-margin_right = -2652.25
-margin_bottom = 618.177
+margin_left = -4490.0
+margin_top = 554.0
+margin_right = -2652.0
+margin_bottom = 586.0
 rect_scale = Vector2( 6, 6 )
 alignment = 1
 __meta__ = {
@@ -122,7 +122,7 @@ __meta__ = {
 [node name="Credits_Button" type="TextureButton" parent="MenuLayer/VBoxContainer2"]
 margin_left = 819.0
 margin_right = 883.0
-margin_bottom = 64.0
+margin_bottom = 32.0
 texture_normal = ExtResource( 9 )
 texture_hover = ExtResource( 12 )
 __meta__ = {
@@ -145,7 +145,7 @@ __meta__ = {
 [node name="Start_Button" type="TextureButton" parent="MenuLayer/VBoxContainer2"]
 margin_left = 887.0
 margin_right = 951.0
-margin_bottom = 64.0
+margin_bottom = 32.0
 texture_normal = ExtResource( 3 )
 texture_hover = ExtResource( 11 )
 
@@ -164,7 +164,7 @@ __meta__ = {
 [node name="Exit_Button" type="TextureButton" parent="MenuLayer/VBoxContainer2"]
 margin_left = 955.0
 margin_right = 1019.0
-margin_bottom = 64.0
+margin_bottom = 32.0
 texture_normal = ExtResource( 5 )
 texture_hover = ExtResource( 13 )
 
