@@ -1,15 +1,137 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://marcianeke_scripts/niveles_meta.gd" type="Script" id=1]
 [ext_resource path="res://sprites/paint_grass.png" type="Texture" id=2]
 [ext_resource path="res://marcianeke_scripts/texturaNiveles.gd" type="Script" id=3]
 [ext_resource path="res://sprites/finish_line.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Backgounds/Level2.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Backgounds/Level2/building1.png" type="Texture" id=6]
+[ext_resource path="res://sprites/Backgounds/Level2/building2.png" type="Texture" id=7]
+[ext_resource path="res://sprites/Backgounds/Level2/building3.png" type="Texture" id=8]
 [ext_resource path="res://Maquillaje señal.tscn" type="PackedScene" id=9]
+[ext_resource path="res://sprites/Backgounds/Level2/building6.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Backgounds/Level2/building4.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Backgounds/Level2/building5.png" type="Texture" id=12]
+[ext_resource path="res://sprites/Backgounds/Level2/building7.png" type="Texture" id=13]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 296.318, 272.522 )
 
 [node name="Estructura_Nivel" type="Node2D"]
+
+[node name="Fondo" type="Node2D" parent="."]
+scale = Vector2( 8, 8 )
+
+[node name="Level2" type="Sprite" parent="Fondo"]
+position = Vector2( 1865.63, 145.436 )
+texture = ExtResource( 5 )
+
+[node name="Node2D" type="Node2D" parent="."]
+scale = Vector2( 20, 20 )
+
+[node name="Building4" type="Sprite" parent="Node2D"]
+position = Vector2( 214.494, -14.5642 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 8 )
+
+[node name="Building1" type="Sprite" parent="Node2D"]
+position = Vector2( -63.6757, -11.7638 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+
+[node name="Building2" type="Sprite" parent="Node2D"]
+position = Vector2( 302.792, -25.5356 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+
+[node name="Building3" type="Sprite" parent="Node2D"]
+position = Vector2( 729.474, 50.4592 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 6 )
+
+[node name="Building5" type="Sprite" parent="Node2D"]
+position = Vector2( 86.4806, 5.33925 )
+texture = ExtResource( 7 )
+
+[node name="Building6" type="Sprite" parent="Node2D"]
+position = Vector2( 1318.5, 106.739 )
+texture = ExtResource( 7 )
+
+[node name="Building7" type="Sprite" parent="Node2D"]
+position = Vector2( 1076.45, 96.9511 )
+texture = ExtResource( 8 )
+
+[node name="Building8" type="Sprite" parent="Node2D"]
+position = Vector2( 961.11, 78.3527 )
+texture = ExtResource( 11 )
+
+[node name="Building9" type="Sprite" parent="Node2D"]
+position = Vector2( 1557.88, 85.6121 )
+texture = ExtResource( 12 )
+
+[node name="Building10" type="Sprite" parent="Node2D"]
+position = Vector2( 1381.23, 99.2252 )
+texture = ExtResource( 10 )
+
+[node name="Building11" type="Sprite" parent="Node2D"]
+position = Vector2( 904.719, 60.2792 )
+texture = ExtResource( 10 )
+
+[node name="Building12" type="Sprite" parent="Node2D"]
+position = Vector2( 24.8456, -0.452328 )
+texture = ExtResource( 10 )
+
+[node name="Building15" type="Sprite" parent="Node2D"]
+position = Vector2( 449.884, 8.01019 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 11 )
+
+[node name="Building13" type="Sprite" parent="Node2D"]
+position = Vector2( 150.257, -1.58499 )
+texture = ExtResource( 13 )
+
+[node name="Building14" type="Sprite" parent="Node2D"]
+position = Vector2( 393.305, -8.59519 )
+texture = ExtResource( 13 )
+
+[node name="Building16" type="Sprite" parent="Node2D"]
+position = Vector2( 512.68, 25.9513 )
+texture = ExtResource( 8 )
+
+[node name="Building17" type="Sprite" parent="Node2D"]
+position = Vector2( 641.859, 46.696 )
+texture = ExtResource( 10 )
+
+[node name="Building18" type="Sprite" parent="Node2D"]
+position = Vector2( 574.372, 44.9336 )
+texture = ExtResource( 13 )
+
+[node name="Building21" type="Sprite" parent="Node2D"]
+position = Vector2( 1142.38, 108.837 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Building22" type="Sprite" parent="Node2D"]
+position = Vector2( 1254.78, 94.4371 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 13 )
+
+[node name="Building20" type="Sprite" parent="Node2D"]
+position = Vector2( 1199.04, 96.4161 )
+scale = Vector2( 1, 1 )
+texture = ExtResource( 11 )
+
+[node name="Building19" type="Sprite" parent="Node2D"]
+position = Vector2( 832.866, 39.0817 )
+texture = ExtResource( 13 )
+
+[node name="Building23" type="Sprite" parent="Node2D"]
+position = Vector2( 1437.98, 91.264 )
+texture = ExtResource( 11 )
+
+[node name="Building24" type="Sprite" parent="Node2D"]
+position = Vector2( 1493.94, 85.8669 )
+texture = ExtResource( 13 )
 
 [node name="selfies" type="Node2D" parent="."]
 
