@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Fondo_Inicio.tscn" type="PackedScene" id=2]
@@ -10,6 +10,9 @@
 [ext_resource path="res://Fonts/Makeup/FatPix-SVG.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://sprites/Buttons/Button2.png" type="Texture" id=9]
 [ext_resource path="res://Fonts/hf-free-complete/expression-pro-v1.1/ExpressionPro.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://sprites/Buttons/Button1_select.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Buttons/Button2_select.png" type="Texture" id=12]
+[ext_resource path="res://sprites/Buttons/Button3_select.png" type="Texture" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 150
@@ -121,6 +124,7 @@ margin_left = 819.0
 margin_right = 883.0
 margin_bottom = 64.0
 texture_normal = ExtResource( 9 )
+texture_hover = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false,
 "_editor_description_": ""
@@ -143,6 +147,7 @@ margin_left = 887.0
 margin_right = 951.0
 margin_bottom = 64.0
 texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 11 )
 
 [node name="Label" type="Label" parent="MenuLayer/VBoxContainer2/Start_Button"]
 margin_top = 1.0
@@ -161,6 +166,7 @@ margin_left = 955.0
 margin_right = 1019.0
 margin_bottom = 64.0
 texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 13 )
 
 [node name="Label" type="Label" parent="MenuLayer/VBoxContainer2/Exit_Button"]
 margin_top = 1.0
