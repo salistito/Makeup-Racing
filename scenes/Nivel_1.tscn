@@ -1,4 +1,4 @@
-[gd_scene load_steps=476 format=2]
+[gd_scene load_steps=477 format=2]
 
 [ext_resource path="res://marcianeke_scripts/niveles_meta.gd" type="Script" id=1]
 [ext_resource path="res://sprites/finish_line.png" type="Texture" id=2]
@@ -14,13 +14,14 @@
 [ext_resource path="res://addons/rmsmartshape/shapes/shape_closed.gd" type="Script" id=12]
 [ext_resource path="res://addons/rmsmartshape/vertex_properties.gd" type="Script" id=13]
 [ext_resource path="res://addons/rmsmartshape/materials/shape_material.gd" type="Script" id=14]
-[ext_resource path="res://Sprites_nivel1/pasto1.PNG" type="Texture" id=15]
+[ext_resource path="res://sprites/Floors/Level1-2.png" type="Texture" id=15]
 [ext_resource path="res://Sprites_nivel1/suelo2.png" type="Texture" id=16]
 [ext_resource path="res://addons/rmsmartshape/materials/edge_material.gd" type="Script" id=17]
 [ext_resource path="res://addons/rmsmartshape/normal_range.gd" type="Script" id=18]
 [ext_resource path="res://Sprites_nivel1/adorno.PNG" type="Texture" id=19]
 [ext_resource path="res://Sprites_nivel1/pastito.PNG" type="Texture" id=20]
 [ext_resource path="res://Sprites_nivel1/Krook Tree.png" type="Texture" id=21]
+[ext_resource path="res://sprites/Floors/Level1-1.png" type="Texture" id=22]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 296.318, 272.522 )
@@ -183,7 +184,7 @@ properties = SubResource( 833 )
 
 [sub_resource type="Resource" id=835]
 script = ExtResource( 13 )
-texture_idx = 1
+texture_idx = -1
 flip = false
 width = 1.0
 
@@ -2543,7 +2544,7 @@ _next_key = 182
 
 [sub_resource type="Resource" id=720]
 script = ExtResource( 17 )
-textures = [ ExtResource( 15 ) ]
+textures = [ ExtResource( 22 ) ]
 texture_normals = [  ]
 textures_corner_outer = [  ]
 textures_corner_inner = [  ]
@@ -2576,7 +2577,7 @@ offset = 0.0
 [sub_resource type="Resource" id=362]
 script = ExtResource( 14 )
 _edge_meta_materials = [ SubResource( 361 ) ]
-fill_textures = [ ExtResource( 16 ) ]
+fill_textures = [ ExtResource( 15 ) ]
 fill_texture_normals = [  ]
 fill_texture_z_index = 0
 fill_mesh_offset = 0.0
