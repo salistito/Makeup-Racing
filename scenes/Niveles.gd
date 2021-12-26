@@ -26,3 +26,9 @@ func _on_Nivel3_pressed():
 
 func _on_Nivel4_pressed():
 	get_tree().change_scene("res://scenes/main4.tscn")
+
+
+func _on_Button_pressed():
+	Manager.block2 = false
+	Manager.block3 = false
+	Manager.block4 = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://scenes/Niveles.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Fondo_Inicio.tscn" type="PackedScene" id=2]
@@ -7,7 +7,14 @@
 [ext_resource path="res://sprites/Niveles Inicio/Level2.png" type="Texture" id=5]
 [ext_resource path="res://sprites/Niveles Inicio/Level4.png" type="Texture" id=6]
 [ext_resource path="res://sprites/Buttons/Volver.png" type="Texture" id=7]
-[ext_resource path="res://scenes/TextureButton2.gd" type="Script" id=8]
+[ext_resource path="res://scenes/level3button.gd" type="Script" id=8]
+[ext_resource path="res://sprites/Niveles Inicio/Level1Select.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Niveles Inicio/Level3Select.png" type="Texture" id=10]
+[ext_resource path="res://sprites/Niveles Inicio/Level4Select.png" type="Texture" id=11]
+[ext_resource path="res://sprites/Niveles Inicio/Level2Select.png" type="Texture" id=12]
+[ext_resource path="res://sprites/Niveles Inicio/blocked.png" type="Texture" id=13]
+[ext_resource path="res://scenes/level2button.gd" type="Script" id=14]
+[ext_resource path="res://scenes/level4button.gd" type="Script" id=15]
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -21,7 +28,7 @@ __meta__ = {
 position = Vector2( 0, 350 )
 scale = Vector2( 0.67, 0.67 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="HBoxContainer" parent="."]
 anchor_left = 0.422
 anchor_top = 0.14
 anchor_right = 0.57
@@ -32,14 +39,20 @@ margin_right = -139.36
 margin_bottom = 345.856
 rect_scale = Vector2( 2, 2 )
 alignment = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="TextureButton" type="TextureButton" parent="VBoxContainer"]
 margin_right = 128.0
 margin_bottom = 64.0
 texture_normal = ExtResource( 7 )
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+margin_left = 132.0
+margin_right = 228.0
+margin_bottom = 64.0
+text = "Konami Code"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
 margin_left = 543.0
@@ -62,12 +75,15 @@ __meta__ = {
 margin_right = 64.0
 margin_bottom = 32.0
 texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 9 )
 
 [node name="TextureButton2" type="TextureButton" parent="HBoxContainer/VBoxContainer2"]
 margin_top = 36.0
 margin_right = 64.0
 margin_bottom = 68.0
 texture_normal = ExtResource( 4 )
+texture_hover = ExtResource( 10 )
+texture_disabled = ExtResource( 13 )
 script = ExtResource( 8 )
 
 [node name="VBoxContainer3" type="VBoxContainer" parent="HBoxContainer"]
@@ -82,14 +98,21 @@ __meta__ = {
 margin_right = 64.0
 margin_bottom = 32.0
 texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 12 )
+texture_disabled = ExtResource( 13 )
+script = ExtResource( 14 )
 
 [node name="TextureButton2" type="TextureButton" parent="HBoxContainer/VBoxContainer3"]
 margin_top = 36.0
 margin_right = 64.0
 margin_bottom = 68.0
 texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 11 )
+texture_disabled = ExtResource( 13 )
+script = ExtResource( 15 )
 
 [connection signal="pressed" from="VBoxContainer/TextureButton" to="." method="_on_BackButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer2/TextureButton" to="." method="_on_Nivel1_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer2/TextureButton2" to="." method="_on_Nivel3_pressed"]
 [connection signal="pressed" from="HBoxContainer/VBoxContainer3/TextureButton" to="." method="_on_Nivel2_pressed"]
