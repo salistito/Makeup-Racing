@@ -1,14 +1,15 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Fondo_Inicio.tscn" type="PackedScene" id=2]
-[ext_resource path="res://sprites/Buttons/Creditos.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Buttons/Button1.png" type="Texture" id=3]
 [ext_resource path="res://Songs/Main_Menu1.mp3" type="AudioStream" id=4]
-[ext_resource path="res://sprites/Buttons/Salir.png" type="Texture" id=5]
+[ext_resource path="res://sprites/Buttons/Button3.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/Racing/Torque-Master.otf" type="DynamicFontData" id=6]
 [ext_resource path="res://Fonts/hf-free-complete/expression-pro-v1.1/ExpressionPro.otf" type="DynamicFontData" id=7]
 [ext_resource path="res://Fonts/Makeup/FatPix-SVG.ttf" type="DynamicFontData" id=8]
-[ext_resource path="res://sprites/Buttons/Jugar.png" type="Texture" id=9]
+[ext_resource path="res://sprites/Buttons/Button2.png" type="Texture" id=9]
+[ext_resource path="res://Fonts/hf-free-complete/expression-pro-v1.1/ExpressionPro.ttf" type="DynamicFontData" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 150
@@ -24,6 +25,9 @@ size = 200
 outline_size = 1
 outline_color = Color( 1, 0, 0, 1 )
 font_data = ExtResource( 6 )
+
+[sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 10 )
 
 [node name="Menu" type="Control"]
 anchor_top = 0.5
@@ -64,6 +68,7 @@ margin_top = 212.724
 margin_right = 19.4119
 margin_bottom = 531.724
 __meta__ = {
+"_edit_lock_": true,
 "_edit_use_anchors_": true
 }
 
@@ -100,11 +105,11 @@ custom_fonts/font = SubResource( 3 )
 text = "Racing"
 
 [node name="VBoxContainer2" type="HBoxContainer" parent="MenuLayer"]
-margin_left = -1717.78
-margin_top = 550.613
-margin_right = 120.223
-margin_bottom = 614.613
-rect_scale = Vector2( 3, 3 )
+margin_left = -4490.26
+margin_top = 554.177
+margin_right = -2652.25
+margin_bottom = 618.177
+rect_scale = Vector2( 6, 6 )
 alignment = 1
 __meta__ = {
 "_edit_group_": true,
@@ -112,22 +117,38 @@ __meta__ = {
 }
 
 [node name="Credits_Button" type="TextureButton" parent="MenuLayer/VBoxContainer2"]
-margin_left = 723.0
-margin_right = 851.0
+margin_left = 819.0
+margin_right = 883.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": ""
+}
+
+[node name="Start_Button" type="TextureButton" parent="MenuLayer/VBoxContainer2"]
+margin_left = 887.0
+margin_right = 951.0
 margin_bottom = 64.0
 texture_normal = ExtResource( 3 )
 
-[node name="Start_Button" type="TextureButton" parent="MenuLayer/VBoxContainer2"]
-margin_left = 855.0
-margin_right = 983.0
-margin_bottom = 64.0
-texture_normal = ExtResource( 9 )
-
 [node name="Exit_Button" type="TextureButton" parent="MenuLayer/VBoxContainer2"]
-margin_left = 987.0
-margin_right = 1115.0
+margin_left = 955.0
+margin_right = 1019.0
 margin_bottom = 64.0
 texture_normal = ExtResource( 5 )
+
+[node name="Label" type="Label" parent="MenuLayer/VBoxContainer2/Exit_Button"]
+margin_top = 1.0
+margin_right = 64.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 5 )
+text = "SALIR"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="MenuLayer/VBoxContainer2/Credits_Button" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="MenuLayer/VBoxContainer2/Start_Button" to="." method="_on_StartButton_pressed"]
