@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/Instrucciones.gd" type="Script" id=1]
-[ext_resource path="res://sprites/Buttons/Volver.png" type="Texture" id=2]
+[ext_resource path="res://Fonts/hf-free-complete/expression-pro-v1.1/ExpressionPro.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://sprites/Backgounds/Credits.png" type="Texture" id=3]
+[ext_resource path="res://sprites/Buttons/Button4_select.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Buttons/Button4.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -19,9 +24,9 @@ texture = ExtResource( 3 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 26.7836
-margin_top = 15.1426
-margin_right = 547.784
-margin_bottom = 310.143
+margin_top = 19.8994
+margin_right = 579.784
+margin_bottom = 332.899
 rect_scale = Vector2( 3, 3 )
 __meta__ = {
 "_edit_group_": true,
@@ -66,49 +71,60 @@ text = "Nivel 3: https://www.bensound.com - \"The Lounge\""
 [node name="Label7" type="Label" parent="VBoxContainer"]
 margin_top = 108.0
 margin_right = 553.0
-margin_bottom = 139.0
-text = "Nivel 4: fesliyanstudios.com - \"Final Boss\"
-"
+margin_bottom = 122.0
+text = "Nivel 4: fesliyanstudios.com - \"Final Boss\""
 
 [node name="Label8" type="Label" parent="VBoxContainer"]
-margin_top = 143.0
+margin_top = 126.0
 margin_right = 553.0
-margin_bottom = 191.0
+margin_bottom = 174.0
 text = "Texturas:
 Nivel 4 Suelo: Gothicvania Rocky Pass Environment - ansimuz 
 (https://ansimuz.itch.io/gothicvania-rocky-pass-environment)"
 
 [node name="Label9" type="Label" parent="VBoxContainer"]
-margin_top = 195.0
+margin_top = 178.0
 margin_right = 553.0
-margin_bottom = 209.0
+margin_bottom = 192.0
 text = "Meta Niveles: kindpng.com/imgv/omwRwx_clip-art-finish-flag-finish-line-pixel-art/"
 
 [node name="Label10" type="Label" parent="VBoxContainer"]
-margin_top = 213.0
+margin_top = 196.0
 margin_right = 553.0
-margin_bottom = 295.0
-text = "
-Fuentes de texto:
+margin_bottom = 261.0
+text = "Fuentes de texto:
 Fuente de titulo 1: https://ngndang.itch.io/fat-pix-font
 Fuente de titulo 2: https://www.dafontfree.co/torque-master-font/
 Fuente textos general: https://somepx.itch.io/humble-fonts-free"
 
 [node name="Label11" type="Label" parent="VBoxContainer"]
-margin_top = 299.0
+margin_top = 265.0
 margin_right = 553.0
-margin_bottom = 347.0
+margin_bottom = 313.0
 text = "Efectos de Sonido:
 Choque: https://www.videvo.net/sound-effect/wood-crashes-distant-fs022705/262147/
-"
+Salto: https://sfxr.me/"
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 1739.72
-margin_top = 843.991
-margin_right = 1867.72
-margin_bottom = 907.991
-rect_scale = Vector2( 2, 2 )
-texture_normal = ExtResource( 2 )
+margin_left = 1740.0
+margin_top = 844.0
+margin_right = 1804.0
+margin_bottom = 876.0
+rect_scale = Vector2( 4, 4 )
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureButton"]
+margin_top = 1.0
+margin_right = 64.0
+margin_bottom = 31.0
+custom_fonts/font = SubResource( 1 )
+text = "Volver"
+align = 1
+valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
