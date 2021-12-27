@@ -181,8 +181,8 @@ margin_top = 372.0
 margin_right = 138.0
 margin_bottom = 388.0
 rect_scale = Vector2( 7, 7 )
-min_value = -30.0
-max_value = 40.0
+min_value = -50.0
+max_value = 50.0
 value = 40.0
 __meta__ = {
 "_edit_use_anchors_": false

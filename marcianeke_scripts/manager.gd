@@ -11,3 +11,5 @@ var goals
 var block2 = true
 var block3 = true
 var block4 = true
+
+var nodo_nivel3

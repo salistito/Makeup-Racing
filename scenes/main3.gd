@@ -15,6 +15,7 @@ func _ready():
 	victory_menu.hide()
 	defeat_menu.hide()
 	Manager.niveles_meta.connect("body_entered", self, "on_body_entered")
+	Manager.nodo_nivel3.connect("play_wedding",self,"wedding")
 	
 func show_distraction():
 	$CanvasLayer2/Sprite.visible = true
@@ -149,6 +150,11 @@ func ready_goals():
 		
 	else:
 		return false
+		
+func wedding():
+	print("BBBBBBBBBBBBBBBBBBB")
+	$AudioStreamPlayer.stop()
+	$AudioStreamPlayer2.play()
 	
 
 
