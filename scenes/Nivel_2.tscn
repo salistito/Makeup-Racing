@@ -1,6 +1,8 @@
-[gd_scene load_steps=383 format=2]
+[gd_scene load_steps=387 format=2]
 
 [ext_resource path="res://marcianeke_scripts/niveles_meta.gd" type="Script" id=1]
+[ext_resource path="res://sprites/Signs/Slow32.png" type="Texture" id=2]
+[ext_resource path="res://sprites/Signs/Warning16.png" type="Texture" id=3]
 [ext_resource path="res://sprites/finish_line.png" type="Texture" id=4]
 [ext_resource path="res://sprites/Backgounds/Level2.png" type="Texture" id=5]
 [ext_resource path="res://sprites/Backgounds/Level2/building1.png" type="Texture" id=6]
@@ -19,6 +21,8 @@
 [ext_resource path="res://addons/rmsmartshape/materials/edge_material_metadata.gd" type="Script" id=19]
 [ext_resource path="res://addons/rmsmartshape/normal_range.gd" type="Script" id=20]
 [ext_resource path="res://addons/rmsmartshape/materials/edge_material.gd" type="Script" id=21]
+[ext_resource path="res://sprites/Signs/Jump32.png" type="Texture" id=22]
+[ext_resource path="res://sprites/Signs/Warning32.png" type="Texture" id=23]
 [ext_resource path="res://sprites/Floors/Level2-2.png" type="Texture" id=24]
 [ext_resource path="res://sprites/Floors/Level2-1.png" type="Texture" id=25]
 
@@ -2599,6 +2603,74 @@ texture = ExtResource( 5 )
 
 [node name="Senaleticas" type="Node2D" parent="."]
 
+[node name="Jump32" type="Sprite" parent="Senaleticas"]
+position = Vector2( -756.285, 297.379 )
+scale = Vector2( 5.00727, 5.1867 )
+texture = ExtResource( 22 )
+
+[node name="Warning16" type="Sprite" parent="Senaleticas"]
+position = Vector2( 9109.68, 577.562 )
+rotation = 0.349066
+scale = Vector2( 7.5, 7.5 )
+texture = ExtResource( 3 )
+
+[node name="Slow32" type="Sprite" parent="Senaleticas"]
+position = Vector2( 12004.5, 1392.49 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 2 )
+
+[node name="Jump33" type="Sprite" parent="Senaleticas"]
+position = Vector2( 5617.55, 57.6045 )
+scale = Vector2( 5.00727, 5.1867 )
+texture = ExtResource( 22 )
+
+[node name="Jump34" type="Sprite" parent="Senaleticas"]
+position = Vector2( 4671.12, 203.329 )
+scale = Vector2( 5.00727, 5.1867 )
+texture = ExtResource( 22 )
+
+[node name="Warning32" type="Sprite" parent="Senaleticas"]
+position = Vector2( 24428.7, 2121.72 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 23 )
+
+[node name="Slow33" type="Sprite" parent="Senaleticas"]
+position = Vector2( 1832.39, 473.265 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 2 )
+
+[node name="Jump36" type="Sprite" parent="Senaleticas"]
+position = Vector2( 12833.2, 1405.91 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 22 )
+
+[node name="Jump35" type="Sprite" parent="Senaleticas"]
+position = Vector2( 28091.7, 2355.3 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 22 )
+
+[node name="Jump37" type="Sprite" parent="Senaleticas"]
+position = Vector2( 14339.6, 1321.62 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 22 )
+
+[node name="Jump38" type="Sprite" parent="Senaleticas"]
+position = Vector2( 15485.5, 1212.01 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 22 )
+
+[node name="Jump39" type="Sprite" parent="Senaleticas"]
+position = Vector2( 2935.57, 340.193 )
+rotation = -0.349066
+scale = Vector2( 5, 5 )
+texture = ExtResource( 22 )
+
+[node name="Slow34" type="Sprite" parent="Senaleticas"]
+position = Vector2( 7830.8, -2.02985 )
+rotation = 0.261799
+scale = Vector2( 6, 6 )
+texture = ExtResource( 2 )
+
 [node name="Node2D" type="Node2D" parent="."]
 scale = Vector2( 20, 20 )
 z_index = -10
@@ -2606,25 +2678,40 @@ z_index = -10
 [node name="Building4" type="Sprite" parent="Node2D"]
 position = Vector2( 214.494, -14.5642 )
 texture = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Building1" type="Sprite" parent="Node2D"]
 position = Vector2( -63.6757, -11.7638 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Building2" type="Sprite" parent="Node2D"]
 position = Vector2( 302.792, -25.5356 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Building3" type="Sprite" parent="Node2D"]
 position = Vector2( 739.314, 58.4376 )
 scale = Vector2( 2, 2 )
 texture = ExtResource( 6 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Building5" type="Sprite" parent="Node2D"]
 position = Vector2( 86.4806, 5.33925 )
 texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Building6" type="Sprite" parent="Node2D"]
 position = Vector2( 1318.5, 106.739 )
@@ -2645,6 +2732,9 @@ texture = ExtResource( 12 )
 [node name="Building10" type="Sprite" parent="Node2D"]
 position = Vector2( 1381.23, 99.2252 )
 texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Building11" type="Sprite" parent="Node2D"]
 position = Vector2( 904.719, 60.2792 )
@@ -2653,18 +2743,30 @@ texture = ExtResource( 10 )
 [node name="Building12" type="Sprite" parent="Node2D"]
 position = Vector2( 24.8456, -0.452328 )
 texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Building15" type="Sprite" parent="Node2D"]
 position = Vector2( 449.884, 8.01019 )
 texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Building13" type="Sprite" parent="Node2D"]
 position = Vector2( 150.257, -1.58499 )
 texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Building14" type="Sprite" parent="Node2D"]
 position = Vector2( 393.305, -8.59519 )
 texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Building16" type="Sprite" parent="Node2D"]
 position = Vector2( 512.68, 25.9513 )
@@ -2673,10 +2775,16 @@ texture = ExtResource( 8 )
 [node name="Building17" type="Sprite" parent="Node2D"]
 position = Vector2( 637.048, 50.9723 )
 texture = ExtResource( 10 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Building18" type="Sprite" parent="Node2D"]
 position = Vector2( 574.372, 44.9336 )
 texture = ExtResource( 13 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Building21" type="Sprite" parent="Node2D"]
 position = Vector2( 1142.38, 108.837 )
@@ -2689,6 +2797,9 @@ texture = ExtResource( 13 )
 [node name="Building20" type="Sprite" parent="Node2D"]
 position = Vector2( 1199.04, 96.4161 )
 texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Building19" type="Sprite" parent="Node2D"]
 position = Vector2( 839.761, 39.9226 )
@@ -2697,6 +2808,9 @@ texture = ExtResource( 13 )
 [node name="Building23" type="Sprite" parent="Node2D"]
 position = Vector2( 1437.98, 91.264 )
 texture = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Building24" type="Sprite" parent="Node2D"]
 position = Vector2( 1493.94, 85.8669 )
@@ -2720,7 +2834,7 @@ position = Vector2( 13290.6, 1048.23 )
 position = Vector2( 20007.1, 1966.43 )
 
 [node name="NivelMeta" type="Area2D" parent="."]
-position = Vector2( 31725.8, 2040.47 )
+position = Vector2( 31724.7, 2066.29 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -2730,8 +2844,8 @@ __meta__ = {
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="NivelMeta"]
-position = Vector2( -0.794922, 80.1637 )
-scale = Vector2( 0.684367, 0.730142 )
+position = Vector2( -15.947, 34.1428 )
+scale = Vector2( 1.02074, 0.9837 )
 texture = ExtResource( 4 )
 
 [node name="Abajo" type="StaticBody2D" parent="."]
