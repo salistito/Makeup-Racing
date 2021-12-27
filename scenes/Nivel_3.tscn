@@ -1,9 +1,10 @@
-[gd_scene load_steps=477 format=2]
+[gd_scene load_steps=497 format=2]
 
 [ext_resource path="res://marcianeke_scripts/niveles_meta.gd" type="Script" id=1]
 [ext_resource path="res://sprites/paint_grass.png" type="Texture" id=2]
 [ext_resource path="res://marcianeke_scripts/texturaNiveles.gd" type="Script" id=3]
 [ext_resource path="res://sprites/finish_line.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Backgounds/Level3/rock1.png" type="Texture" id=5]
 [ext_resource path="res://addons/rmsmartshape/vertex_properties.gd" type="Script" id=6]
 [ext_resource path="res://addons/rmsmartshape/shapes/shape_closed.gd" type="Script" id=7]
 [ext_resource path="res://addons/rmsmartshape/materials/shape_material.gd" type="Script" id=8]
@@ -20,6 +21,12 @@
 [ext_resource path="res://addons/rmsmartshape/materials/edge_material.gd" type="Script" id=19]
 [ext_resource path="res://sprites/Floors/Level1-2.png" type="Texture" id=20]
 [ext_resource path="res://sprites/Floors/Level1-1.png" type="Texture" id=21]
+[ext_resource path="res://sprites/Backgounds/Level3/castle.png" type="Texture" id=22]
+[ext_resource path="res://sprites/Backgounds/Level3/rock2.png" type="Texture" id=23]
+[ext_resource path="res://sprites/Backgounds/Level1/bush1.png" type="Texture" id=24]
+[ext_resource path="res://sprites/Backgounds/Level1/tree3.png" type="Texture" id=25]
+[ext_resource path="res://sprites/Backgounds/Level1/bush3.png" type="Texture" id=26]
+[ext_resource path="res://sprites/Backgounds/Level1/tree1.png" type="Texture" id=27]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 296.318, 272.522 )
@@ -3282,6 +3289,100 @@ fill_texture_z_index = -10
 fill_mesh_offset = 0.0
 render_offset = 0.0
 
+[sub_resource type="Resource" id=1779]
+script = ExtResource( 6 )
+texture_idx = 4
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1780]
+script = ExtResource( 11 )
+position = Vector2( 7465.8, 950.147 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1779 )
+
+[sub_resource type="Resource" id=1781]
+script = ExtResource( 6 )
+texture_idx = -2
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1782]
+script = ExtResource( 11 )
+position = Vector2( 8275.94, 929.416 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1781 )
+
+[sub_resource type="Resource" id=1783]
+script = ExtResource( 6 )
+texture_idx = -2
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1784]
+script = ExtResource( 11 )
+position = Vector2( 7473, 1042.41 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1783 )
+
+[sub_resource type="Resource" id=1785]
+script = ExtResource( 6 )
+texture_idx = 4
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1786]
+script = ExtResource( 11 )
+position = Vector2( 7465.8, 950.147 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1785 )
+
+[sub_resource type="Resource" id=1787]
+script = ExtResource( 6 )
+texture_idx = 1
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1788]
+script = ExtResource( 11 )
+position = Vector2( 8267.88, 1068.52 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1787 )
+
+[sub_resource type="Resource" id=1789]
+script = ExtResource( 6 )
+texture_idx = 1
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=1790]
+script = ExtResource( 11 )
+position = Vector2( 7887.43, 1066.13 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 1789 )
+
+[sub_resource type="Resource" id=1791]
+script = ExtResource( 10 )
+_points = {
+0: SubResource( 1780 ),
+1: SubResource( 1782 ),
+2: SubResource( 1784 ),
+3: SubResource( 1786 ),
+4: SubResource( 1788 ),
+5: SubResource( 1790 )
+}
+_point_order = [ 0, 1, 4, 5, 2, 3 ]
+_constraints = {
+[ 0, 3 ]: 15
+}
+_next_key = 6
+
 [node name="Estructura_Nivel" type="Node2D"]
 __meta__ = {
 "_edit_vertical_guides_": [ -68405.7 ]
@@ -3291,11 +3392,54 @@ __meta__ = {
 z_index = -150
 
 [node name="Prueba" type="Sprite" parent="Node2D"]
-position = Vector2( 15327.6, 8453.61 )
+position = Vector2( 15329.6, 8469.61 )
 scale = Vector2( 8, 8 )
 z_index = -13
 z_as_relative = false
 texture = ExtResource( 12 )
+
+[node name="WeddingSign" type="Sprite" parent="Node2D/Prueba"]
+position = Vector2( -271.986, 231.421 )
+rotation = 0.261799
+scale = Vector2( 0.627035, 0.615892 )
+texture = ExtResource( 13 )
+
+[node name="Palm2" type="Sprite" parent="Node2D/Prueba"]
+position = Vector2( -1239.75, -105.866 )
+rotation = 0.347523
+scale = Vector2( 0.959745, 1.25675 )
+texture = ExtResource( 16 )
+
+[node name="Rock4" type="Sprite" parent="Node2D/Prueba"]
+position = Vector2( -580.495, 167.591 )
+rotation = 0.261799
+scale = Vector2( 0.627035, 0.615892 )
+texture = ExtResource( 23 )
+
+[node name="Castle" type="Sprite" parent="Node2D/Prueba"]
+position = Vector2( -615.08, 153.895 )
+rotation = 0.261799
+scale = Vector2( 0.627035, 0.615892 )
+texture = ExtResource( 22 )
+
+[node name="Rock1" type="Sprite" parent="Node2D/Prueba"]
+position = Vector2( 725.832, 1347.8 )
+scale = Vector2( 0.660632, 0.577875 )
+texture = ExtResource( 5 )
+
+[node name="Rock2" type="Sprite" parent="Node2D/Prueba"]
+position = Vector2( 798.77, 1337.55 )
+texture = ExtResource( 23 )
+
+[node name="Rock3" type="Sprite" parent="Node2D/Prueba"]
+position = Vector2( -1275.23, -85.2131 )
+rotation = 0.347523
+scale = Vector2( 0.650365, 0.373281 )
+texture = ExtResource( 5 )
+
+[node name="WeddingSign2" type="Sprite" parent="Node2D/Prueba"]
+position = Vector2( 951.292, -1054.75 )
+texture = ExtResource( 13 )
 
 [node name="Node2D2" type="Node2D" parent="."]
 scale = Vector2( 8, 8 )
@@ -3381,6 +3525,7 @@ position = Vector2( 13290.6, 1048.23 )
 position = Vector2( 20007.1, 1966.43 )
 
 [node name="Area2D" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
 position = Vector2( -13908.3, -334.045 )
@@ -3392,6 +3537,7 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Area2D2" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D2"]
 position = Vector2( -9192.97, -727.057 )
@@ -3403,6 +3549,7 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Area2D3" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D3"]
 visible = false
@@ -3415,6 +3562,7 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Area2D4" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D4"]
 visible = false
@@ -3427,6 +3575,7 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Area2D5" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D5"]
 position = Vector2( -2360.63, -1205.3 )
@@ -3438,6 +3587,7 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
 position = Vector2( -490.131, -858.465 )
@@ -3448,6 +3598,7 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D2"]
 position = Vector2( 2824.07, -498.366 )
@@ -3458,6 +3609,7 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D3"]
 position = Vector2( 161.453, -20.1814 )
@@ -3468,6 +3620,7 @@ texture = ExtResource( 2 )
 script = ExtResource( 3 )
 
 [node name="Area2D6" type="StaticBody2D" parent="."]
+visible = false
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D6"]
 position = Vector2( 5630.07, -24227.2 )
@@ -3598,6 +3751,66 @@ _points = SubResource( 1778 )
 material_overrides = {
 }
 shape_material = SubResource( 1340 )
+tessellation_stages = 5
+tessellation_tolerence = 4.0
+flip_edges = false
+render_edges = true
+collision_size = 32.0
+collision_offset = 0.0
+collision_polygon_node_path = NodePath("")
+
+[node name="Tree3" type="Sprite" parent="."]
+position = Vector2( -1281.53, 11.8763 )
+scale = Vector2( 8.52166, 10.1664 )
+texture = ExtResource( 25 )
+
+[node name="Tree3" type="Sprite" parent="Tree3"]
+position = Vector2( 52.8291, 0.463312 )
+texture = ExtResource( 25 )
+
+[node name="Tree3" type="Sprite" parent="Tree3/Tree3"]
+position = Vector2( 50.634, 1.02099 )
+texture = ExtResource( 25 )
+
+[node name="Bush1" type="Sprite" parent="."]
+position = Vector2( 7863.83, 753.585 )
+scale = Vector2( 4.83922, 5.96306 )
+texture = ExtResource( 24 )
+
+[node name="Bush3" type="Sprite" parent="."]
+position = Vector2( 3821.28, 1261.15 )
+rotation = -0.122173
+scale = Vector2( 4.52594, 3.38789 )
+texture = ExtResource( 26 )
+
+[node name="Bush4" type="Sprite" parent="."]
+position = Vector2( 1983.74, 855.901 )
+rotation = 0.421603
+scale = Vector2( 4.52594, 3.38789 )
+texture = ExtResource( 26 )
+
+[node name="Bush5" type="Sprite" parent="."]
+position = Vector2( 2636.22, 1123.15 )
+rotation = 0.421603
+scale = Vector2( 4.52594, 3.38789 )
+texture = ExtResource( 26 )
+
+[node name="Tree1" type="Sprite" parent="."]
+position = Vector2( 9164.8, 1513.15 )
+scale = Vector2( 5.17137, 6.29765 )
+texture = ExtResource( 27 )
+
+[node name="Butterfly" type="Sprite" parent="."]
+position = Vector2( 3263.75, 1171.35 )
+scale = Vector2( 8.79694, 7.17196 )
+texture = ExtResource( 14 )
+
+[node name="SS2D_Shape_Closed9" type="Node2D" parent="."]
+script = ExtResource( 7 )
+_points = SubResource( 1791 )
+material_overrides = {
+}
+shape_material = SubResource( 223 )
 tessellation_stages = 5
 tessellation_tolerence = 4.0
 flip_edges = false
