@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Fondo_Inicio.tscn" type="PackedScene" id=2]
@@ -29,6 +29,10 @@ outline_color = Color( 1, 0, 0, 1 )
 font_data = ExtResource( 6 )
 
 [sub_resource type="DynamicFont" id=5]
+font_data = ExtResource( 10 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 93
 font_data = ExtResource( 10 )
 
 [node name="Menu" type="Control"]
@@ -187,6 +191,14 @@ value = 40.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Label" type="Label" parent="."]
+margin_left = 220.003
+margin_top = 312.761
+margin_right = 536.003
+margin_bottom = 394.761
+custom_fonts/font = SubResource( 6 )
+text = "Volumen"
 
 [connection signal="pressed" from="MenuLayer/VBoxContainer2/Credits_Button" to="." method="_on_OptionsButton_pressed"]
 [connection signal="pressed" from="MenuLayer/VBoxContainer2/Start_Button" to="." method="_on_StartButton_pressed"]
