@@ -189,19 +189,6 @@ point_in = Vector2( 0, 0 )
 point_out = Vector2( 0, 0 )
 properties = SubResource( 4795 )
 
-[sub_resource type="Resource" id=4797]
-script = ExtResource( 7 )
-texture_idx = 2
-flip = false
-width = 1.0
-
-[sub_resource type="Resource" id=4798]
-script = ExtResource( 10 )
-position = Vector2( 4254.21, 807.36 )
-point_in = Vector2( 0, 0 )
-point_out = Vector2( 0, 0 )
-properties = SubResource( 4797 )
-
 [sub_resource type="Resource" id=4799]
 script = ExtResource( 7 )
 texture_idx = 1
@@ -223,23 +210,10 @@ width = 1.0
 
 [sub_resource type="Resource" id=4802]
 script = ExtResource( 10 )
-position = Vector2( 5341.25, 610.313 )
+position = Vector2( 5687.3, 330.93 )
 point_in = Vector2( 0, 0 )
 point_out = Vector2( 0, 0 )
 properties = SubResource( 4801 )
-
-[sub_resource type="Resource" id=4803]
-script = ExtResource( 7 )
-texture_idx = 2
-flip = false
-width = 1.0
-
-[sub_resource type="Resource" id=4804]
-script = ExtResource( 10 )
-position = Vector2( 3791.96, 206.682 )
-point_in = Vector2( 0, 0 )
-point_out = Vector2( 0, 0 )
-properties = SubResource( 4803 )
 
 [sub_resource type="Resource" id=4805]
 script = ExtResource( 7 )
@@ -249,7 +223,7 @@ width = 1.0
 
 [sub_resource type="Resource" id=4806]
 script = ExtResource( 10 )
-position = Vector2( 4065.78, 653.047 )
+position = Vector2( 3989.5, 606.431 )
 point_in = Vector2( 0, 0 )
 point_out = Vector2( 0, 0 )
 properties = SubResource( 4805 )
@@ -262,7 +236,7 @@ width = 1.0
 
 [sub_resource type="Resource" id=4808]
 script = ExtResource( 10 )
-position = Vector2( 4197.3, 157.608 )
+position = Vector2( 4619.38, -184.45 )
 point_in = Vector2( 0, 0 )
 point_out = Vector2( 0, 0 )
 properties = SubResource( 4807 )
@@ -475,6 +449,32 @@ point_in = Vector2( 0, 0 )
 point_out = Vector2( 0, 0 )
 properties = SubResource( 4839 )
 
+[sub_resource type="Resource" id=5630]
+script = ExtResource( 7 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=5631]
+script = ExtResource( 10 )
+position = Vector2( 5014.56, -31.5742 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 5630 )
+
+[sub_resource type="Resource" id=5632]
+script = ExtResource( 7 )
+texture_idx = 0
+flip = false
+width = 1.0
+
+[sub_resource type="Resource" id=5633]
+script = ExtResource( 10 )
+position = Vector2( 4665.1, 567.907 )
+point_in = Vector2( 0, 0 )
+point_out = Vector2( 0, 0 )
+properties = SubResource( 5632 )
+
 [sub_resource type="Resource" id=4841]
 script = ExtResource( 8 )
 _points = {
@@ -489,10 +489,8 @@ _points = {
 8: SubResource( 4792 ),
 9: SubResource( 4794 ),
 10: SubResource( 4796 ),
-11: SubResource( 4798 ),
 12: SubResource( 4800 ),
 13: SubResource( 4802 ),
-14: SubResource( 4804 ),
 15: SubResource( 4806 ),
 16: SubResource( 4808 ),
 17: SubResource( 4810 ),
@@ -510,13 +508,15 @@ _points = {
 30: SubResource( 4834 ),
 31: SubResource( 4836 ),
 32: SubResource( 4838 ),
-33: SubResource( 4840 )
+33: SubResource( 4840 ),
+34: SubResource( 5631 ),
+35: SubResource( 5633 )
 }
-_point_order = [ 3, 2, 6, 7, 10, 11, 15, 14, 16, 13, 18, 20, 19, 17, 23, 22, 26, 25, 31, 30, 29, 32, 33, 28, 24, 21, 12, 8, 9, 5, 4, 1, 0 ]
+_point_order = [ 3, 2, 6, 7, 10, 15, 35, 16, 34, 13, 18, 20, 19, 17, 23, 22, 26, 25, 31, 30, 29, 32, 33, 28, 24, 21, 12, 8, 9, 5, 4, 1, 0 ]
 _constraints = {
 [ 0, 3 ]: 15
 }
-_next_key = 34
+_next_key = 36
 
 [sub_resource type="Resource" id=2128]
 script = ExtResource( 14 )
@@ -6815,14 +6815,16 @@ scale = Vector2( 5.93825, 3.8432 )
 texture = ExtResource( 23 )
 
 [node name="Building14" type="Sprite" parent="Fuego_y_weas"]
-position = Vector2( 3877.18, 26.7991 )
-scale = Vector2( 12.0631, 8.59435 )
+position = Vector2( 3877.18, 186.083 )
+scale = Vector2( 12.0631, 13.572 )
+z_index = -10
 texture = ExtResource( 29 )
 
 [node name="Fire4" type="Sprite" parent="Fuego_y_weas"]
 position = Vector2( 3652.69, 415.457 )
 rotation = 0.261799
 scale = Vector2( 14.9562, 11.1019 )
+z_index = -10
 texture = ExtResource( 23 )
 
 [node name="Nose4" type="Sprite" parent="Fuego_y_weas"]
@@ -6859,12 +6861,6 @@ texture = ExtResource( 23 )
 position = Vector2( 2913.55, 340.008 )
 scale = Vector2( 19.488, 11.2828 )
 texture = ExtResource( 23 )
-
-[node name="Nose2" type="Sprite" parent="Fuego_y_weas"]
-position = Vector2( 4205.94, 396.436 )
-rotation = 0.261799
-scale = Vector2( 14.9562, 11.1019 )
-texture = ExtResource( 27 )
 
 [node name="Ghost1" type="Sprite" parent="Fuego_y_weas"]
 position = Vector2( 6663.06, 275.508 )
@@ -7108,9 +7104,10 @@ scale = Vector2( 10.7632, 6.78123 )
 texture = ExtResource( 19 )
 
 [node name="Building7" type="Sprite" parent="buildings"]
-position = Vector2( 4999.71, -36.9763 )
+position = Vector2( 4875.56, -38.2757 )
 rotation = 0.300197
-scale = Vector2( 22.2608, 12.6665 )
+scale = Vector2( 22.2608, 27.7991 )
+z_index = -10
 texture = ExtResource( 19 )
 
 [node name="Building13" type="Sprite" parent="buildings"]
@@ -7149,7 +7146,7 @@ texture = ExtResource( 32 )
 [node name="Prueba" type="Sprite" parent="."]
 position = Vector2( 19466.4, 4625.39 )
 scale = Vector2( 8, 8 )
-z_index = -10
+z_index = -11
 texture = ExtResource( 2 )
 __meta__ = {
 "_edit_lock_": true
@@ -7203,7 +7200,7 @@ collision_polygon_node_path = NodePath("../CollisionPolygon2D")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D13"]
 visible = false
 modulate = Color( 1, 1, 1, 0.3 )
-polygon = PoolVector2Array( -1573.03, -167.137, -1432.92, 181.244, 774.922, 139.035, 1787.33, -138.638, 2391.53, 488.064, 4199.53, 784.388, 3970.34, 736.321, 3716.46, 170.209, 4213.28, 33.5863, 5383.62, 489.609, 6507.87, 835.239, 6709.67, 897.79, 6873.53, 933.646, 8405.36, 1294.7, 8937.67, 1248.13, 9570.53, 1164.3, 9929.18, 1168.29, 11834.4, 1009.04, 12678.9, 841.607, 13266.6, 657.155, 13421.7, 1011.29, 13169.7, 1184.26, 12718.3, 1575.71, 12339.1, 1838.73, 10679.6, 2460.61, 9907.27, 2470.28, 5428.9, 2517.52, 3003.13, 1875.07, 1603.54, 1968.74, -55.2566, 2025.38, -1871.93, 575.715, -1904.06, 337.712 )
+polygon = PoolVector2Array( -1573.03, -167.137, -1432.92, 181.244, 774.922, 139.035, 1787.33, -138.638, 2385.07, 487.072, 3986.22, 478.52, 4590.53, 501.638, 4569.9, -252.141, 5068.03, -147.661, 5757.73, 224.515, 6529.31, 845.95, 6709.67, 897.79, 6873.53, 933.646, 8405.36, 1294.7, 8937.67, 1248.13, 9570.53, 1164.3, 9929.18, 1168.29, 11834.4, 1009.04, 12678.9, 841.607, 13266.6, 657.155, 13421.7, 1011.29, 13169.7, 1184.26, 12718.3, 1575.71, 12339.1, 1838.73, 10679.6, 2460.61, 9907.27, 2470.28, 5428.9, 2517.52, 3003.13, 1875.07, 1603.54, 1968.74, -55.2566, 2025.38, -1871.93, 575.715, -1904.06, 337.712 )
 
 [node name="StaticBody2D12" type="StaticBody2D" parent="."]
 position = Vector2( 200, 32 )

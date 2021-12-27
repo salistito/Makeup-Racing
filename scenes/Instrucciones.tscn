@@ -29,45 +29,54 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="VBoxContainer"]
-margin_right = 327.0
+margin_right = 397.0
 margin_bottom = 14.0
 text = "Creditos"
 
 [node name="Label2" type="Label" parent="VBoxContainer"]
 margin_top = 18.0
-margin_right = 327.0
+margin_right = 397.0
 margin_bottom = 32.0
 text = "Canciones:"
 
 [node name="Label3" type="Label" parent="VBoxContainer"]
 margin_top = 36.0
-margin_right = 327.0
+margin_right = 397.0
 margin_bottom = 50.0
 text = "Menú: chosic.com - \"Fast Feel Banana Peel\""
 
 [node name="Label4" type="Label" parent="VBoxContainer"]
 margin_top = 54.0
-margin_right = 327.0
+margin_right = 397.0
 margin_bottom = 68.0
 text = "Nivel 1: chosic.com - \"Upbeat Forever\""
 
 [node name="Label5" type="Label" parent="VBoxContainer"]
 margin_top = 72.0
-margin_right = 327.0
+margin_right = 397.0
 margin_bottom = 86.0
 text = "Nivel 2: https://www.bensound.com - \"all that\""
 
 [node name="Label6" type="Label" parent="VBoxContainer"]
 margin_top = 90.0
-margin_right = 327.0
+margin_right = 397.0
 margin_bottom = 104.0
 text = "Nivel 3: https://www.bensound.com - \"The Lounge\""
 
 [node name="Label7" type="Label" parent="VBoxContainer"]
 margin_top = 108.0
-margin_right = 327.0
-margin_bottom = 122.0
-text = "Nivel 4: "
+margin_right = 397.0
+margin_bottom = 139.0
+text = "Nivel 4: fesliyanstudios.com - \"Final Boss\"
+"
+
+[node name="Label8" type="Label" parent="VBoxContainer"]
+margin_top = 143.0
+margin_right = 397.0
+margin_bottom = 191.0
+text = "Texturas:
+Nivel 4 Suelo: Gothicvania Rocky Pass Environment - ansimuz 
+(https://ansimuz.itch.io/gothicvania-rocky-pass-environment)"
 
 [node name="TextureButton" type="TextureButton" parent="."]
 margin_left = 1739.72
