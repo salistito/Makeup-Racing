@@ -20,7 +20,7 @@ script = ExtResource( 20 )
 [node name="Estructura_Nivel" parent="." instance=ExtResource( 2 )]
 
 [node name="russian_car" parent="." instance=ExtResource( 1 )]
-position = Vector2( 13949.5, 3150.44 )
+position = Vector2( -1064.44, -34.0422 )
 gravity_scale = 35.0
 
 [node name="Camera2D" type="Camera2D" parent="russian_car"]
