@@ -4955,7 +4955,7 @@ width = 1.0
 
 [sub_resource type="Resource" id=5389]
 script = ExtResource( 10 )
-position = Vector2( 20303.2, 2599.7 )
+position = Vector2( 20275.2, 2587.7 )
 point_in = Vector2( 0, 0 )
 point_out = Vector2( 0, 0 )
 properties = SubResource( 5388 )
@@ -4968,7 +4968,7 @@ width = 1.0
 
 [sub_resource type="Resource" id=5391]
 script = ExtResource( 10 )
-position = Vector2( 20152.8, 2922.97 )
+position = Vector2( 20116.8, 2874.97 )
 point_in = Vector2( 0, 0 )
 point_out = Vector2( 0, 0 )
 properties = SubResource( 5390 )
@@ -4981,7 +4981,7 @@ width = 1.0
 
 [sub_resource type="Resource" id=5393]
 script = ExtResource( 10 )
-position = Vector2( 19968.1, 3102.34 )
+position = Vector2( 19924.1, 3070.34 )
 point_in = Vector2( 0, 0 )
 point_out = Vector2( 0, 0 )
 properties = SubResource( 5392 )
@@ -5085,7 +5085,7 @@ width = 1.0
 
 [sub_resource type="Resource" id=5613]
 script = ExtResource( 10 )
-position = Vector2( 19421.3, 3335.14 )
+position = Vector2( 19421.3, 3311.14 )
 point_in = Vector2( 0, 0 )
 point_out = Vector2( 0, 0 )
 properties = SubResource( 5612 )
@@ -6900,7 +6900,7 @@ collision_polygon_node_path = NodePath("../CollisionPolygon2D")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Loop2"]
 visible = false
 modulate = Color( 1, 1, 1, 0.3 )
-polygon = PoolVector2Array( 17546.4, 2364.32, 17955.1, 1756.82, 18185.9, 1574.91, 19156.1, 825.613, 20611.7, 1082.54, 20550.9, 3051.08, 19853.3, 4043.91, 19308.4, 4005.81, 18295.9, 3668.43, 17576.8, 3305.82, 18356, 3295.21, 18820.2, 3310.53, 19406.6, 3273.32, 19933, 3049.49, 20101.1, 2886.21, 20241.5, 2585.74, 20245, 2130.32, 20165.6, 1899.29, 19991.8, 1695.41, 19836.3, 1542.59, 19641.2, 1444.63, 19384, 1378.78, 19075.9, 1415.47, 18740.5, 1515.61, 18419.3, 1653.38, 18257, 1739.03, 18086.3, 1915.7, 17928.8, 2144.22, 17612.2, 2492.07, 17558.7, 2461.55 )
+polygon = PoolVector2Array( 17546.4, 2364.32, 17955.1, 1756.82, 18185.9, 1574.91, 19156.1, 825.613, 20611.7, 1082.54, 20550.9, 3051.08, 19853.3, 4043.91, 19308.4, 4005.81, 18295.9, 3668.43, 17576.8, 3305.82, 18356, 3295.21, 18818.9, 3310.6, 19404, 3250.01, 19887.2, 3018.62, 20065.8, 2836.87, 20214.5, 2569.82, 20244.9, 2128.41, 20165.6, 1899.29, 19991.8, 1695.41, 19836.3, 1542.59, 19641.2, 1444.63, 19384, 1378.78, 19075.9, 1415.47, 18740.5, 1515.61, 18419.3, 1653.38, 18257, 1739.03, 18086.3, 1915.7, 17928.8, 2144.22, 17612.2, 2492.07, 17558.7, 2461.55 )
 
 [node name="StaticBody2D18" type="StaticBody2D" parent="."]
 position = Vector2( -362.039, -463.862 )
