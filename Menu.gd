@@ -10,6 +10,8 @@ extends Control
 func _ready():
 	#$MenuLayer/VBoxContainer/VBoxContainer2/Start_Button.grab_focus()
 	$MenuLayer/VBoxContainer2/Start_Button.grab_focus()
+	if not MenuMusic.playing:
+		MenuMusic.play()
 
 	
 

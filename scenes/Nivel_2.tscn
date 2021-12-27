@@ -2597,6 +2597,8 @@ z_index = -10
 position = Vector2( 1865.63, 145.436 )
 texture = ExtResource( 5 )
 
+[node name="Senaleticas" type="Node2D" parent="."]
+
 [node name="Node2D" type="Node2D" parent="."]
 scale = Vector2( 20, 20 )
 z_index = -10
