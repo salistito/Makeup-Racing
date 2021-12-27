@@ -1,4 +1,4 @@
-[gd_scene load_steps=387 format=2]
+[gd_scene load_steps=388 format=2]
 
 [ext_resource path="res://marcianeke_scripts/niveles_meta.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Signs/Slow32.png" type="Texture" id=2]
@@ -25,6 +25,7 @@
 [ext_resource path="res://sprites/Signs/Warning32.png" type="Texture" id=23]
 [ext_resource path="res://sprites/Floors/Level2-2.png" type="Texture" id=24]
 [ext_resource path="res://sprites/Floors/Level2-1.png" type="Texture" id=25]
+[ext_resource path="res://sprites/Backgounds/Level4/trash.png" type="Texture" id=26]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 296.318, 272.522 )
@@ -2671,6 +2672,36 @@ rotation = 0.261799
 scale = Vector2( 6, 6 )
 texture = ExtResource( 2 )
 
+[node name="Trash" type="Sprite" parent="Senaleticas"]
+position = Vector2( 1158.67, 484.334 )
+scale = Vector2( 2.24738, 2.63323 )
+texture = ExtResource( 26 )
+
+[node name="Trash2" type="Sprite" parent="Senaleticas"]
+position = Vector2( 1277.65, 491.069 )
+scale = Vector2( 2.24738, 2.63323 )
+texture = ExtResource( 26 )
+
+[node name="Trash3" type="Sprite" parent="Senaleticas"]
+position = Vector2( 1414.59, 495.559 )
+scale = Vector2( 2.24738, 2.63323 )
+texture = ExtResource( 26 )
+
+[node name="Trash4" type="Sprite" parent="Senaleticas"]
+position = Vector2( 26690.6, 2493.77 )
+scale = Vector2( 2.24738, 2.63323 )
+texture = ExtResource( 26 )
+
+[node name="Trash5" type="Sprite" parent="Senaleticas"]
+position = Vector2( 26808.1, 2501.7 )
+scale = Vector2( 2.24738, 2.63323 )
+texture = ExtResource( 26 )
+
+[node name="Trash6" type="Sprite" parent="Senaleticas"]
+position = Vector2( 26922.4, 2509.64 )
+scale = Vector2( 2.24738, 2.63323 )
+texture = ExtResource( 26 )
+
 [node name="Node2D" type="Node2D" parent="."]
 scale = Vector2( 20, 20 )
 z_index = -10
@@ -2716,6 +2747,9 @@ __meta__ = {
 [node name="Building6" type="Sprite" parent="Node2D"]
 position = Vector2( 1318.5, 106.739 )
 texture = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
 
 [node name="Building7" type="Sprite" parent="Node2D"]
 position = Vector2( 1076.45, 96.9511 )
@@ -2866,6 +2900,7 @@ collision_polygon_node_path = NodePath("../CollisionPolygon2D")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Abajo"]
 modulate = Color( 1, 1, 1, 0.3 )
+position = Vector2( -13.4695, 0 )
 polygon = PoolVector2Array( -3588.99, -226.388, -2346.77, -197.772, -2350.25, 364.015, -519.474, 385.37, -521.442, 298.693, -211.228, 311.76, 70.0606, 374.341, 273.353, 404.135, 541.371, 471.122, 881.929, 526.377, 1283.17, 543.801, 1833.76, 565.908, 2766.1, 487.725, 3135.77, 342.021, 3224, 321.184, 3443, 272.053, 3565.69, 270.583, 3609, 270.172, 3787.63, 268.46, 4044.34, 265.981, 4262.31, 270.885, 4479.46, 275.34, 4884.71, 296.819, 4889.42, 144.153, 5176.36, 134.651, 5689.44, 139.799, 5796.11, 153.716, 5795.95, -21.3533, 7163.58, -21.5131, 7441.49, -3.36367, 7666.03, 52.5701, 8110.07, 162.087, 8208.04, 190.543, 8867.8, 560.809, 9239.29, 685.844, 9453.5, 553.422, 9558.85, 805.408, 9729.13, 651.076, 9871.95, 920.886, 9997.22, 790.446, 10108.4, 973.639, 10232, 899.228, 10283.8, 1014.18, 10407.4, 970.174, 10440.6, 1053.5, 10527, 1036.86, 10550.4, 1094.42, 10616.9, 1049.32, 10641.1, 1118.48, 10732.2, 1091.38, 10773.9, 1157.15, 10890.6, 1115.06, 10913.3, 1206.13, 10985.3, 1168.5, 11015.9, 1222.6, 11084.9, 1204.58, 11117.1, 1246.21, 11208.2, 1185.76, 11226.9, 1280.05, 11294.7, 1243.25, 11326.2, 1288.42, 11431.2, 1239.97, 11474.4, 1324.55, 11573, 1303.94, 11658.8, 1378.78, 11814.6, 1359, 11895.7, 1464.54, 13223.1, 1487.99, 13381.5, 1619.05, 13567.1, 1731.91, 13817.1, 1795.3, 15725.9, 1808.12, 15881.5, 1808.98, 16044.8, 1803.85, 16131.6, 1778.51, 16176.4, 1734.62, 16147.8, 1550.4, 16168.8, 1213.76, 16524.7, 1284.72, 17519.6, 1405.1, 18258.1, 1639.87, 18444.4, 1710.74, 18765.5, 1837.34, 18978.3, 1920.49, 19828.2, 2202.89, 21029, 2455.26, 21868.8, 2484.95, 23377.8, 2465.74, 24086.6, 2312.68, 24217.6, 2263.69, 24328, 2215.53, 24429.7, 2184.66, 24624.7, 2278.17, 24752.3, 2329.21, 24904.2, 2376.5, 25118.7, 2427.79, 25544, 2461.43, 26707.7, 2535.42, 27068.6, 2561.44, 27483.5, 2507.61, 28028.2, 2439.53, 28422.3, 2405.52, 28624.3, 2394.01, 28612.5, 2235.01, 29615.3, 2261.39, 29888.2, 2277.37, 30946.9, 2259.36, 31390.8, 2249.36, 31996.8, 2248.22, 31992.8, 1230.2, 35299.8, 1166.27, 35644.7, 6513.18, -3538.94, 6280.29 )
 
 [node name="Loop" type="StaticBody2D" parent="."]

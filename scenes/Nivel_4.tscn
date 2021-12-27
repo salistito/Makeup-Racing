@@ -7007,7 +7007,7 @@ __meta__ = {
 [node name="selfies" type="Node2D" parent="."]
 
 [node name="Maquillaje señal3" parent="selfies" instance=ExtResource( 9 )]
-position = Vector2( 6182.49, -203.558 )
+position = Vector2( 6182.49, 78.1236 )
 
 [node name="Maquillaje señal2" parent="selfies" instance=ExtResource( 9 )]
 position = Vector2( 1588.09, 202.658 )
