@@ -1,6 +1,7 @@
-[gd_scene load_steps=940 format=2]
+[gd_scene load_steps=941 format=2]
 
 [ext_resource path="res://marcianeke_scripts/niveles_meta.gd" type="Script" id=1]
+[ext_resource path="res://sprites/Backgounds/Level4/prueba.png" type="Texture" id=2]
 [ext_resource path="res://scenes/hellBall.tscn" type="PackedScene" id=4]
 [ext_resource path="res://sprites/finish_line.png" type="Texture" id=5]
 [ext_resource path="res://addons/rmsmartshape/materials/shape_material.gd" type="Script" id=6]
@@ -6753,6 +6754,16 @@ fill_mesh_offset = 0.0
 render_offset = 0.0
 
 [node name="Estructura_Nivel" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ -2379.01, -2347.89, 12058.6 ],
+"_edit_vertical_guides_": [ 42129.8, -10816.3, -3000.44 ]
+}
+
+[node name="Prueba" type="Sprite" parent="."]
+position = Vector2( 19466.4, 4625.39 )
+scale = Vector2( 8, 8 )
+z_index = -10
+texture = ExtResource( 2 )
 
 [node name="selfies" type="Node2D" parent="."]
 
