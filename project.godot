@@ -177,6 +177,7 @@ config/icon="res://icon.png"
 [autoload]
 
 Manager="*res://marcianeke_scripts/manager.gd"
+MenuMusic="*res://scenes/MenuMusic.tscn"
 
 [display]
 

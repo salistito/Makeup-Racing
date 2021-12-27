@@ -1,9 +1,8 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Fondo_Inicio.tscn" type="PackedScene" id=2]
 [ext_resource path="res://sprites/Buttons/Button1.png" type="Texture" id=3]
-[ext_resource path="res://Songs/Main_Menu1.mp3" type="AudioStream" id=4]
 [ext_resource path="res://sprites/Buttons/Button3.png" type="Texture" id=5]
 [ext_resource path="res://Fonts/Racing/Torque-Master.otf" type="DynamicFontData" id=6]
 [ext_resource path="res://Fonts/hf-free-complete/expression-pro-v1.1/ExpressionPro.otf" type="DynamicFontData" id=7]
@@ -44,10 +43,6 @@ __meta__ = {
 [node name="Node2D" parent="." instance=ExtResource( 2 )]
 position = Vector2( 0, -150 )
 scale = Vector2( 0.67, 0.67 )
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
-autoplay = true
 
 [node name="MenuLayer" type="CanvasLayer" parent="."]
 
