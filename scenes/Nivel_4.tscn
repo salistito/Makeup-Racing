@@ -1,4 +1,4 @@
-[gd_scene load_steps=958 format=2]
+[gd_scene load_steps=967 format=2]
 
 [ext_resource path="res://marcianeke_scripts/niveles_meta.gd" type="Script" id=1]
 [ext_resource path="res://sprites/Backgounds/Level4/prueba.png" type="Texture" id=2]
@@ -33,6 +33,15 @@
 [ext_resource path="res://sprites/Backgounds/Level4/building6.png" type="Texture" id=31]
 [ext_resource path="res://sprites/Backgounds/Level4/building7.png" type="Texture" id=32]
 [ext_resource path="res://sprites/Backgounds/Level4/ghost3.png" type="Texture" id=33]
+[ext_resource path="res://sprites/Backgounds/Level4/bone2.png" type="Texture" id=34]
+[ext_resource path="res://sprites/Backgounds/Level4/trash.png" type="Texture" id=35]
+[ext_resource path="res://sprites/Backgounds/Level4/nose3.png" type="Texture" id=36]
+[ext_resource path="res://sprites/Backgounds/Level4/skull1.png" type="Texture" id=37]
+[ext_resource path="res://sprites/Backgounds/Level4/tumba1.png" type="Texture" id=38]
+[ext_resource path="res://sprites/Backgounds/Level4/bone1.png" type="Texture" id=39]
+[ext_resource path="res://sprites/Backgounds/Level4/skull2.png" type="Texture" id=40]
+[ext_resource path="res://sprites/Backgounds/Level4/tumba2.png" type="Texture" id=41]
+[ext_resource path="res://sprites/Backgounds/Level4/fire1.png" type="Texture" id=42]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 296.318, 272.522 )
@@ -6776,7 +6785,18 @@ __meta__ = {
 "_edit_vertical_guides_": [ 42129.8, -10816.3, -3000.44 ]
 }
 
+[node name="Fire2" type="Sprite" parent="."]
+position = Vector2( 33186.2, 10048.2 )
+scale = Vector2( 23.375, 5.00002 )
+texture = ExtResource( 23 )
+
 [node name="Fuego_y_weas" type="Node2D" parent="."]
+
+[node name="Fire16" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 29231.7, 4253.97 )
+rotation = -0.417134
+scale = Vector2( 23.8903, 10.1772 )
+texture = ExtResource( 23 )
 
 [node name="Ghost3" type="Sprite" parent="Fuego_y_weas"]
 position = Vector2( 8637.77, 850.375 )
@@ -6890,6 +6910,137 @@ texture = ExtResource( 23 )
 position = Vector2( 9504.86, 759.066 )
 scale = Vector2( 12.8777, 15.2247 )
 texture = ExtResource( 23 )
+
+[node name="Bone1" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 13951.2, 872.023 )
+rotation = 3.14159
+scale = Vector2( 1.62009, -1.96732 )
+texture = ExtResource( 39 )
+
+[node name="Nose5" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 19191.9, 3033.92 )
+scale = Vector2( 13.7711, 12.2995 )
+texture = ExtResource( 24 )
+
+[node name="Nose3" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 16408.3, 2558.35 )
+scale = Vector2( 4.73062, 3.92326 )
+texture = ExtResource( 25 )
+
+[node name="Nose6" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 22799.9, 950.517 )
+rotation = -1.95302
+scale = Vector2( 9.33878, 7.73998 )
+texture = ExtResource( 27 )
+
+[node name="Bone2" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 23599.1, 2100.57 )
+scale = Vector2( 2.06653, 1.96732 )
+texture = ExtResource( 39 )
+
+[node name="Nose7" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 27247.6, 1621.33 )
+scale = Vector2( 9.00656, 7.27416 )
+texture = ExtResource( 25 )
+
+[node name="Nose8" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 25272.3, 2388.18 )
+scale = Vector2( 6.6485, 6.78123 )
+texture = ExtResource( 24 )
+
+[node name="Fire17" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 28038.4, 4756.92 )
+rotation = -0.340339
+scale = Vector2( 21.5168, 10.7046 )
+texture = ExtResource( 23 )
+
+[node name="Fire18" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 26733.6, 5166.02 )
+rotation = -0.340339
+scale = Vector2( 24.3744, 9.69585 )
+texture = ExtResource( 23 )
+
+[node name="Fire1" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 27672.7, 5127.55 )
+scale = Vector2( 3.73291, 3.41758 )
+texture = ExtResource( 42 )
+
+[node name="Fire19" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 25382.1, 5521.09 )
+rotation = -0.254818
+scale = Vector2( 22.0224, 10.6703 )
+texture = ExtResource( 23 )
+
+[node name="Fire20" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 25103.5, 5777.27 )
+scale = Vector2( 8.88708, 6.67133 )
+texture = ExtResource( 42 )
+
+[node name="Fire21" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 24195.7, 5966.07 )
+rotation = -0.324631
+scale = Vector2( 20.8214, 9.15936 )
+texture = ExtResource( 23 )
+
+[node name="Fire22" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 23386.2, 6264.74 )
+scale = Vector2( 13.4178, 6.84023 )
+texture = ExtResource( 42 )
+
+[node name="Nose9" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 19761, 8424.9 )
+rotation = 3.14159
+scale = Vector2( 5.79507, -5.17635 )
+texture = ExtResource( 25 )
+
+[node name="Nose10" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 21477, 8707.01 )
+rotation = 3.14159
+scale = Vector2( 7.13184, -5.23654 )
+texture = ExtResource( 27 )
+
+[node name="Nose11" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 24217.6, 8789.06 )
+rotation = 0.764454
+scale = Vector2( 12.5948, 12.6319 )
+texture = ExtResource( 36 )
+
+[node name="Fire23" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 25943.5, 9300.39 )
+scale = Vector2( 7.71892, 4.44142 )
+texture = ExtResource( 23 )
+
+[node name="Fire24" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 28199.6, 9248.41 )
+scale = Vector2( 17.923, 8.46295 )
+texture = ExtResource( 23 )
+
+[node name="Nose12" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 31228.2, 8093.76 )
+rotation = -0.450295
+scale = Vector2( 10.2603, 7.73478 )
+texture = ExtResource( 24 )
+
+[node name="Fire25" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 31822.2, 9986.17 )
+scale = Vector2( 24.625, 7.0625 )
+texture = ExtResource( 23 )
+
+[node name="Bone5" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 35726.3, 8133.88 )
+rotation = -0.898845
+scale = Vector2( 2.76891, 3.62605 )
+texture = ExtResource( 34 )
+
+[node name="Nose13" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 38296.5, 8390.38 )
+scale = Vector2( 2.89874, 2.81963 )
+texture = ExtResource( 25 )
+
+[node name="Fire26" type="Sprite" parent="Fuego_y_weas"]
+position = Vector2( 38925.3, 8343.26 )
+scale = Vector2( 17.0317, 6.57821 )
+texture = ExtResource( 42 )
 
 [node name="buildings" type="Node2D" parent="."]
 
@@ -7547,3 +7698,215 @@ position = Vector2( 4452.95, -946.154 )
 rotation = 1.79594
 scale = Vector2( 1.96673, 1 )
 texture = ExtResource( 23 )
+
+[node name="Skull1" type="Sprite" parent="."]
+position = Vector2( 13027.8, 1936.44 )
+rotation = -0.595157
+scale = Vector2( 1.89636, 1.81927 )
+texture = ExtResource( 37 )
+
+[node name="Tumba1" type="Sprite" parent="."]
+position = Vector2( 12793.2, 2708.3 )
+rotation = 0.223402
+scale = Vector2( 4.66165, 4.1498 )
+texture = ExtResource( 38 )
+
+[node name="Skull2" type="Sprite" parent="."]
+position = Vector2( 12672.9, 2776.96 )
+scale = Vector2( 2.39772, 1.92525 )
+texture = ExtResource( 40 )
+
+[node name="Bone2" type="Sprite" parent="."]
+position = Vector2( 13847.5, 2900.96 )
+rotation = -1.31772
+scale = Vector2( 1.63739, 1.87497 )
+texture = ExtResource( 34 )
+
+[node name="Trash" type="Sprite" parent="."]
+position = Vector2( 14658.1, 3670.54 )
+rotation = 0.254818
+scale = Vector2( 2.18251, 2.15623 )
+texture = ExtResource( 35 )
+
+[node name="Trash" type="Sprite" parent="Trash"]
+position = Vector2( 40.2271, 6.33789 )
+rotation = -0.233874
+texture = ExtResource( 35 )
+
+[node name="Skull3" type="Sprite" parent="."]
+position = Vector2( 16793.3, 3666.47 )
+scale = Vector2( 1.91202, 1.71908 )
+texture = ExtResource( 37 )
+
+[node name="Nose3" type="Sprite" parent="."]
+position = Vector2( 20536.4, 2194.82 )
+scale = Vector2( 9.21759, 9.25932 )
+texture = ExtResource( 36 )
+
+[node name="Bone3" type="Sprite" parent="."]
+position = Vector2( 19073.1, 4424.72 )
+rotation = -0.842994
+scale = Vector2( 1.81412, 3.27246 )
+texture = ExtResource( 34 )
+
+[node name="Skull4" type="Sprite" parent="."]
+position = Vector2( 19114.7, 4403.83 )
+scale = Vector2( 2.48819, 2.19055 )
+texture = ExtResource( 40 )
+
+[node name="EstoVuelaNose" type="Sprite" parent="."]
+position = Vector2( 21631.2, 2886.84 )
+scale = Vector2( 6.85275, 6.89958 )
+texture = ExtResource( 26 )
+
+[node name="Skull5" type="Sprite" parent="."]
+position = Vector2( 21827.3, 1573.15 )
+rotation = -5.38434
+scale = Vector2( 2.24749, 2.1993 )
+texture = ExtResource( 37 )
+
+[node name="Ghost1" type="Sprite" parent="."]
+position = Vector2( 24441.3, 577.542 )
+scale = Vector2( 6.55939, 6.47386 )
+texture = ExtResource( 28 )
+
+[node name="Tumba2" type="Sprite" parent="."]
+position = Vector2( 26088.7, 1845.83 )
+scale = Vector2( 3.43475, 2.6856 )
+texture = ExtResource( 38 )
+
+[node name="Tumba3" type="Sprite" parent="."]
+position = Vector2( 29181.4, 1015.42 )
+rotation = -0.0698132
+scale = Vector2( 3.99661, 3.99661 )
+texture = ExtResource( 41 )
+
+[node name="Trash2" type="Sprite" parent="."]
+position = Vector2( 28236.9, 1559.69 )
+scale = Vector2( 2.53778, 2.93464 )
+texture = ExtResource( 35 )
+
+[node name="Ghost3" type="Sprite" parent="."]
+position = Vector2( 29695.7, 2600.27 )
+scale = Vector2( 5.23785, 6.03245 )
+texture = ExtResource( 33 )
+
+[node name="Ghost2" type="Sprite" parent="."]
+position = Vector2( 31448.1, 1662.65 )
+scale = Vector2( 9.21084, 8.51556 )
+texture = ExtResource( 30 )
+
+[node name="Skull6" type="Sprite" parent="."]
+position = Vector2( 30693.2, 3473.64 )
+rotation = -0.424115
+scale = Vector2( 2.91827, 2.47157 )
+texture = ExtResource( 37 )
+
+[node name="Bone1" type="Sprite" parent="."]
+position = Vector2( 22008.4, 6702.09 )
+rotation = -0.678933
+scale = Vector2( 1.86621, 1.86621 )
+texture = ExtResource( 39 )
+
+[node name="EstoVuelaNose2" type="Sprite" parent="."]
+position = Vector2( 20112.8, 6719.98 )
+scale = Vector2( 5.35446, 5.05011 )
+texture = ExtResource( 26 )
+
+[node name="Skull7" type="Sprite" parent="."]
+position = Vector2( 19777.2, 6671.28 )
+rotation = 0.890118
+scale = Vector2( 1.93646, 1.74915 )
+texture = ExtResource( 37 )
+
+[node name="Tumba4" type="Sprite" parent="."]
+position = Vector2( 21618.1, 6835.88 )
+rotation = -0.169297
+scale = Vector2( 3.13968, 2.68369 )
+texture = ExtResource( 38 )
+
+[node name="Ghost4" type="Sprite" parent="."]
+position = Vector2( 19114, 8317.42 )
+scale = Vector2( 4.88907, 4.95538 )
+texture = ExtResource( 28 )
+
+[node name="Tumba5" type="Sprite" parent="."]
+position = Vector2( 28197.9, 9253.46 )
+scale = Vector2( 5.25705, 4.31102 )
+texture = ExtResource( 38 )
+
+[node name="Trash3" type="Sprite" parent="."]
+position = Vector2( 28070.1, 9327.46 )
+scale = Vector2( 2.62924, 2.52411 )
+texture = ExtResource( 35 )
+
+[node name="Nose4" type="Sprite" parent="."]
+position = Vector2( 35694.6, 6952.11 )
+scale = Vector2( 17.1475, 16.201 )
+texture = ExtResource( 36 )
+
+[node name="EstoVuelaNose3" type="Sprite" parent="."]
+position = Vector2( 35202.8, 7614.93 )
+scale = Vector2( 10.9113, 9.63058 )
+texture = ExtResource( 26 )
+
+[node name="Ghost5" type="Sprite" parent="."]
+position = Vector2( 35865.6, 7682.64 )
+scale = Vector2( 9.79769, 9.07377 )
+texture = ExtResource( 33 )
+
+[node name="Ghost6" type="Sprite" parent="."]
+position = Vector2( 34490.1, 7301.34 )
+scale = Vector2( -15.1431, 13.6396 )
+texture = ExtResource( 28 )
+
+[node name="Tumba6" type="Sprite" parent="."]
+position = Vector2( 33938.4, 10051 )
+scale = Vector2( 4.34088, 3.28293 )
+texture = ExtResource( 38 )
+
+[node name="Tumba7" type="Sprite" parent="."]
+position = Vector2( 32078.2, 10006.4 )
+scale = Vector2( 5.56586, 3.6727 )
+texture = ExtResource( 38 )
+
+[node name="Bone4" type="Sprite" parent="."]
+position = Vector2( 36141.6, 8193.37 )
+scale = Vector2( 2.5434, 1.94707 )
+texture = ExtResource( 39 )
+
+[node name="Skull8" type="Sprite" parent="."]
+position = Vector2( 35879, 8150.71 )
+scale = Vector2( 2.12244, 2.08739 )
+texture = ExtResource( 37 )
+
+[node name="Skull1" type="Sprite" parent="Skull8"]
+position = Vector2( 40.1934, 22.0474 )
+texture = ExtResource( 37 )
+
+[node name="Skull1" type="Sprite" parent="Skull8/Skull1"]
+position = Vector2( 45.4824, 5.37744 )
+texture = ExtResource( 37 )
+
+[node name="Skull2" type="Sprite" parent="Skull8/Skull1/Skull1"]
+position = Vector2( -56.0605, -38.717 )
+texture = ExtResource( 40 )
+
+[node name="Skull2" type="Sprite" parent="Skull8/Skull1/Skull1/Skull2"]
+position = Vector2( 42.3105, 9.6792 )
+texture = ExtResource( 40 )
+
+[node name="Skull9" type="Sprite" parent="."]
+position = Vector2( 35785.8, 8160.81 )
+scale = Vector2( 1.73657, 1.63138 )
+texture = ExtResource( 40 )
+
+[node name="Skull10" type="Sprite" parent="."]
+position = Vector2( 35778.4, 9756.52 )
+scale = Vector2( 2.50452, 2.07057 )
+texture = ExtResource( 40 )
+
+[node name="EstoVuelaNose4" type="Sprite" parent="."]
+position = Vector2( 37854, 8168.05 )
+scale = Vector2( 7.67197, 6.68519 )
+texture = ExtResource( 26 )
