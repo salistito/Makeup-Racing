@@ -18,6 +18,11 @@ func on_input_event(viewport, event: InputEvent, shape_idx):
 	if event is InputEventMouseButton and event.is_pressed() and event.button_index == BUTTON_LEFT:
 		emit_signal("click_boton")
 		print("mandamos señal")
+		print("mandamos señal")
+		print("mandamos señal")
+		print("mandamos señal")
+		print("mandamos señal")
+		print("mandamos señal")
 		Manager.auto.locura()
 		
 		

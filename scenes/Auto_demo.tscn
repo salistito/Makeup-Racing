@@ -1,8 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://scenes/auto.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Nivel_1.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Sprites_nivel1/Background_1.png" type="Texture" id=3]
 [ext_resource path="res://Sprites_nivel1/Background_2.png" type="Texture" id=4]
 [ext_resource path="res://Dibujos/Montaña 2.png" type="Texture" id=8]
 [ext_resource path="res://Dibujos/Montaña 1.png" type="Texture" id=9]
@@ -18,16 +17,6 @@
 
 [node name="Autito" type="Node2D"]
 script = ExtResource( 20 )
-
-[node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 7431.0
-margin_top = 1412.0
-margin_right = 24525.0
-margin_bottom = 5227.0
-color = Color( 0.580392, 0.839216, 1, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Background2" type="Sprite" parent="."]
 position = Vector2( -1406.4, -1010.09 )
@@ -75,6 +64,12 @@ texture = ExtResource( 9 )
 position = Vector2( 1289.22, 143.668 )
 texture = ExtResource( 9 )
 
+[node name="Montaña5" type="Sprite" parent="Montaña1/Montaña5"]
+position = Vector2( -222.558, 159.156 )
+rotation = -2.82743
+scale = Vector2( 1.33649, 2.64352 )
+texture = ExtResource( 9 )
+
 [node name="Montaña6" type="Sprite" parent="Montaña1"]
 position = Vector2( 1493.44, 189.51 )
 texture = ExtResource( 9 )
@@ -87,12 +82,21 @@ texture = ExtResource( 9 )
 position = Vector2( 2057.47, 221.51 )
 texture = ExtResource( 9 )
 
+[node name="Montaña8" type="Sprite" parent="Montaña1/Montaña8"]
+position = Vector2( 447.648, 89.9878 )
+texture = ExtResource( 9 )
+
 [node name="Montaña9" type="Sprite" parent="Montaña1"]
 position = Vector2( 2196.67, 207.91 )
 texture = ExtResource( 9 )
 
 [node name="Montaña10" type="Sprite" parent="Montaña1"]
 position = Vector2( 2565.03, 247.453 )
+texture = ExtResource( 9 )
+
+[node name="Montaña10" type="Sprite" parent="Montaña1/Montaña10"]
+position = Vector2( 243.654, 102.821 )
+scale = Vector2( 1.88628, 1.39988 )
 texture = ExtResource( 9 )
 
 [node name="Montaña11" type="Sprite" parent="Montaña1"]
@@ -110,67 +114,6 @@ texture = ExtResource( 9 )
 [node name="Montaña14" type="Sprite" parent="Montaña1"]
 position = Vector2( 3501.08, 216.093 )
 texture = ExtResource( 9 )
-
-[node name="ColorRect2" type="ColorRect" parent="Montaña1"]
-margin_left = 906.391
-margin_top = 149.324
-margin_right = 1418.39
-margin_bottom = 325.324
-color = Color( 0.239216, 0.317647, 0.65098, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ColorRect3" type="ColorRect" parent="Montaña1"]
-margin_left = 2433.0
-margin_top = 297.0
-margin_right = 3012.0
-margin_bottom = 473.0
-color = Color( 0.239216, 0.317647, 0.65098, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Background1" type="Sprite" parent="."]
-visible = false
-position = Vector2( -1248.45, -464.55 )
-scale = Vector2( 10, 10 )
-texture = ExtResource( 3 )
-__meta__ = {
-"_edit_lock_": true
-}
-
-[node name="Background2" type="Sprite" parent="Background1"]
-position = Vector2( 933.288, 159.272 )
-texture = ExtResource( 3 )
-
-[node name="Background1" type="Sprite" parent="Background1"]
-position = Vector2( 493.335, -4.76837e-06 )
-texture = ExtResource( 3 )
-
-[node name="Background3" type="Sprite" parent="Background1"]
-position = Vector2( 1076.16, 263.437 )
-texture = ExtResource( 3 )
-
-[node name="Background4" type="Sprite" parent="Background1"]
-position = Vector2( 1425.22, 182.079 )
-texture = ExtResource( 3 )
-
-[node name="Background5" type="Sprite" parent="Background1"]
-position = Vector2( 1914.82, 182.079 )
-texture = ExtResource( 3 )
-
-[node name="Background6" type="Sprite" parent="Background1"]
-position = Vector2( 2399.35, 260.479 )
-texture = ExtResource( 3 )
-
-[node name="Background7" type="Sprite" parent="Background1"]
-position = Vector2( 2893.75, 257.279 )
-texture = ExtResource( 3 )
-
-[node name="Background8" type="Sprite" parent="Background1"]
-position = Vector2( 3386.73, 247.679 )
-texture = ExtResource( 3 )
 
 [node name="Estructura_Nivel" parent="." instance=ExtResource( 2 )]
 position = Vector2( -14.4957, 10.9602 )
